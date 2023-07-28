@@ -1,0 +1,20 @@
+! $OpenBSD: dot.Xdefaults,v 1.3 2014/07/10 10:22:59 jasper Exp $
+XTerm*loginShell:true
+XTerm*foreground: #33ff66
+!XTerm*foreground: #ff8700
+XTerm*background: #000000
+XTerm*faceName: xos4 Terminus 
+XTerm*faceSize: 8 
+XTerm*ScrollBar: false
+XTerm*color2: #33ff66
+XTerm*color3: #ffff33
+XTerm*selectToClipboard: true
+URxvt.scrollBar: false
+URxvt.urgentOnBell: true
+URxvt.foreground: #33ff66
+URxvt.background: #000000
+URxvt.color2: #33ff66
+URxvt.color3: #ffff33
+URxvt.font: -misc-fixed-medium-r-normal--15-140-75-75-c-90-iso8859-1
+! switch color scheme on the fly
+URxvt.keysym.C-s command:\033]11;#252525\007
