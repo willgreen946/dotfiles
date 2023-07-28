@@ -54,8 +54,8 @@ Button1 = m : window|icon : f.function "move-or-lower"
 Button2 = m : window|icon : f.iconify
 Button3 = m : window|icon : f.function "move-or-raise"
 
-Button1 = : title : f.function "move-or-raise"
-Button2 = : title : f.raiselower
+#Button1 = : title : f.function "move-or-raise"
+#Button2 = : title : f.raiselower
 
 Button1 = : icon : f.function "move-or-iconify"
 Button2 = : icon : f.iconify
@@ -82,6 +82,9 @@ menu "defops"
 ""		f.nop
 "Xterm"		f.exec "exec xterm &"
 "Browser"	f.exec "exec qutebrowser &"
+"Calculator"	f.exec "exec xcalc &"
+"Vim"		f.exec "exec xterm -e vim &"
+"Tmux"		f.exec "exec xterm -e tmux &"
 ""		f.nop
 "Kill"		f.destroy
 "Delete"	f.delete
