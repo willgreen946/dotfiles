@@ -4,7 +4,7 @@ XTerm*foreground: #33ff66
 !XTerm*foreground: #ff8700
 XTerm*background: #000000
 XTerm*faceName: xos4 Terminus 
-XTerm*faceSize: 8 
+XTerm*faceSize: 10 
 XTerm*ScrollBar: false
 XTerm*color2: #33ff66
 XTerm*color3: #ffff33

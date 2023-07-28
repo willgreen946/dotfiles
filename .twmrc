@@ -21,7 +21,7 @@ IconManagerFont "terminus-ttf"
 Color
 {
     BorderColor "#33ff66"
-    DefaultBackground "rgb:2/a/9"
+    DefaultBackground "#252525"
     DefaultForeground "#33ff66"
     TitleBackground "#000000"
     TitleForeground "#33ff66"
@@ -89,3 +89,6 @@ menu "defops"
 "Restart"	f.restart
 "Exit"		f.quit
 }
+
+Function "fullscreen" { f.fullzoom f.focus f.nop }
+RightTitleButton "maximize.xbm" = f.function "fullscreen"
