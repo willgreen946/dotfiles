@@ -1,15 +1,10 @@
-# this is a bare bones sample .fvwm2rc/system.fvwm2rc file for fvwm.
-# It should be customized before install.  See other sample .fvwm2rc files
-# for hints, as well as pointers from the various links on the official
-# fvwm web page (see the FAQ).
-
 EdgeResistance 250 10
 EdgeScroll 100 100
 ClickTime 750
 
 DeskTopSize 2x2
 Menustyle * fvwm, Font terminus-ttf 
-MenuStyle * Foreground #33ff66, Background black, Greyed black 
+MenuStyle * Foreground black, Background gray40, Greyed gray80 
 
 ColormapFocus FollowsMouse
 
@@ -17,7 +12,7 @@ ColormapFocus FollowsMouse
 # make sure these fonts exist on your system:
 Style *           Font terminus-ttf 
 Style *           IconFont terminus-ttf 
-Style *           HilightFore #33ff66, HilightBack black 
+Style *           HilightFore #33ff66, HilightBack gray40 
 Style *           BorderWidth 0, HandleWidth 2 
 Style *           Icon unknown1.xpm, Color white 
 Style *           MWMFunctions, MWMDecor, HintOverride
@@ -32,27 +27,6 @@ Style "Fvwm*"       BorderWidth 2, CirculateSkipIcon, CirculateSkip
 Style "FvwmPager"   StaysOnTop
 Style "FvwmBanner"  StaysOnTop
 Style "FvwmButtons" Icon toolbox.xpm, ClickToFocus
-
-# Styles for your common terminal emulator programs:
-# Style "XTerm"       Icon xterm.xpm, SloppyFocus, IconBox -70 1 -1 -140
-# Style "rxvt"        Icon term.xpm, SloppyFocus, IconBox -70 1 -1 -140
-# Style "rxvt"        MWMBorder, MWMButtons
-
-# Styles for various common programs:
-# Style "*lock"       !Title, !Handles, Sticky, WindowListSkip, ClickToFocus
-# Style "xbiff"       !Title, Sticky, WindowListSkip, ClickToFocus
-# Style "xcalc"       Icon xcalc.xpm, !Button 2,ClickToFocus
-# Style "xmh"         Icon mail1.xpm, !IconTitle,StickyIcon
-# Style "xmh"	    !Button 2
-# Style "xman"	    Icon xman.xpm, ClickToFocus
-# Style "xmag"	    Icon mag_glass.xpm, ClickToFocus
-# Style "xgraph"      Icon graphs.xpm, ClickToFocus
-# Style "xmosaic"     Color Green/Yellow, ClickToFocus
-
-
-# some simple default key bindings:
-Key Next         A       SCM     Next (AcceptsFocus) Focus
-Key Prior        A       SCM     Prev (AcceptsFocus) Focus
 
 # some simple default mouse bindings:
 #   for the root window:
@@ -75,7 +49,6 @@ Mouse 3	TSIF	A	RaiseLower
 
 ######################## Initialization Functions ############################
 AddToFunc StartFunction
- + I Module FvwmButtons
 
 AddToFunc InitFunction
 # + I exec xsetroot -mod 2 2 -fg rgb:55/40/55 -bg rgb:70/50/70
@@ -89,6 +62,7 @@ AddToMenu RootMenu	"Root Menu"	Title
 +			"XTerm"		Exec exec xterm
 +			"Qutebrowser"	Exec exec qutebrowser
 +			"Wifi"		Exec wpa_gui
++			"Calculator"	Exec xcalc
 # +			""		Nop
 # +			"Remote Logins"	Popup Remote-Logins
 # +			""		Nop
@@ -199,17 +173,6 @@ AddToMenu Quit-Verify 	"Really Quit Fvwm?" Title
 +		      	"Yes, Really Quit"  Quit
 +		      	""		    Nop
 +                       "Restart Fvwm"      Restart
-# +		      	"Restart Fvwm 1.x"  Restart fvwm -s
-# +		      	""		    Nop
-# +		      	"Start twm"         Restart twm
-# +		      	"Start ctwm"        Restart ctwm
-# +		        "Start tvtwm"       Restart tvtwm
-# +		        "Start vtwm"        Restart vtwm
-# +		      	"Start mwm"    	    Restart mwm
-# +	      	      	"Start olwm"        Restart /usr/openwin/bin/olwm
-# +		      	""		    Nop
-# +		      	"Start dummy"       Restart xterm
-# +		      	""		    Nop
 +		      	"No, Don't Quit"    Nop
 
 ######################## Sample Functions ##########################
@@ -274,9 +237,6 @@ AddToFunc ChangeDefaultFocus I Style * $0
 *FvwmButtons: (3x2 Frame 2 Swallow "FvwmIconMan" "Module FvwmIconMan")
 *FvwmButtons: (1x2 Frame 2 Swallow(UseOld) "FvwmPager" "Module FvwmPager 0 0")
 *FvwmButtons: (1x2 Frame 0 Container(Rows 2 Columns 2 Frame 0))
-# *FvwmButtons: (Frame 2 Swallow(UseOld,NoHints,Respawn) "xbiff" `Exec exec xbiff -bg bisque3`)
-# *FvwmButtons: (Frame 3 Swallow(UseOld,NoHints,Respawn) "xclock" `Exec exec xclock -bg bisque3 -fg black -hd black -hl black -padding 0 -update 1`)
-# *FvwmButtons: (2x1 Frame 2 Swallow(UseOld,NoHints,Respawn) "xload" `Exec exec xload -bg bisque3 -fg black -update 5 -nolabel`)
 *FvwmButtons: (End)
 *FvwmButtons: (End)
 
@@ -433,8 +393,7 @@ AddToFunc ChangeDefaultFocus I Style * $0
 # FvwmForm alias - query exit ala mwm
 *QuitVerify: GrabServer
 *QuitVerify: WarpPointer
-*QuitVerify: Font          *helvetica*m*r*n*14*
-#*QuitVerify: ButtonFont    *helvetica*m*o*n*14*
+*QuitVerify: Font          terminus-ttf
 *QuitVerify: ButtonFont    7x13bold
 *QuitVerify: Fore          Black
 *QuitVerify: Back          Light Gray
