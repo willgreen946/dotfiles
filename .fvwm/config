@@ -12,8 +12,8 @@ ColormapFocus FollowsMouse
 # make sure these fonts exist on your system:
 Style *           Font terminus-ttf 
 Style *           IconFont terminus-ttf 
-Style *           HilightFore #33ff66, HilightBack gray40 
-Style *           BorderWidth 0, HandleWidth 2 
+Style *           HilightFore white, HilightBack red 
+Style *           BorderWidth 2, HandleWidth 8 
 Style *           Icon unknown1.xpm, Color white 
 Style *           MWMFunctions, MWMDecor, HintOverride
 Style *           DecorateTransient, !UsePPosition
@@ -23,7 +23,7 @@ Style *           TileCascadePlacement
 
 # Styles for various Fvwm modules:
 Style "Fvwm*"       !Title,  Sticky, WindowListSkip
-Style "Fvwm*"       BorderWidth 2, CirculateSkipIcon, CirculateSkip
+Style "Fvwm*"       BorderWidth 8, CirculateSkipIcon, CirculateSkip
 Style "FvwmPager"   StaysOnTop
 Style "FvwmBanner"  StaysOnTop
 Style "FvwmButtons" Icon toolbox.xpm, ClickToFocus
@@ -61,13 +61,11 @@ AddToFunc SessionInitFunction
 AddToMenu RootMenu	"Root Menu"	Title
 +			"XTerm"		Exec exec xterm
 +			"Qutebrowser"	Exec exec qutebrowser
-+			"Wifi"		Exec wpa_gui
-+			"Calculator"	Exec xcalc
-# +			""		Nop
-# +			"Remote Logins"	Popup Remote-Logins
-# +			""		Nop
-# +			"Utilities"     Popup Utilities
-# +			""		Nop
++			"Wifi"		Exec exec wpa_gui
++			"VIM"		Exec exec xterm -T vim -e vim
++			"Calculator"	Exec exec xcalc
++			"HTOP"		Exec exec xterm -T HTOP -e htop
++			"CoinTOP"	Exec exec xterm -T CoinTOP -e cointop
 +			"Fvwm Modules"	          Popup Module-Popup
 +                       "Fvwm Window Ops"         Popup Window-Ops
 +                       "Fvwm Simple Config Ops"  Popup Misc-Ops
@@ -78,18 +76,7 @@ AddToMenu RootMenu	"Root Menu"	Title
 +			"Exit Fvwm"	Popup Quit-Verify
 
 # AddToMenu Utilities     "Utilities" Title
-# +			"Top"		Exec exec xterm -T Top -n Top -e top
 +			"Calculator"	Exec exec xcalc
-# +			"Xman"		Exec exec xman
-# +			"Xmag"		Exec exec xmag
-# +			"Editres"       Exec exec editres
-# +			""		Nop
-# +			"XEmacs"	Exec exec xemacs
-# +			"Mail"          MailFunction xmh "-font fixed"
-# +			""		Nop
-# +			"XLock"         Exec exec xlock -mode random
-# +			""		Nop
-# +			"Reset X defaults" Exec xrdb -load $HOME/.Xdefaults
 
 AddToMenu Misc-Ops "Misc Config Opts" Title
 +                  "Sloppy Focus"        ChangeDefaultFocus SloppyFocus
@@ -136,16 +123,6 @@ AddToMenu Window-Ops2	"&Move"		Move
 +			"ScrollBar" 	Module FvwmScroll 2 2
 +			"Print"         PrintFunction
 +                       "Print Reverse" PrintReverseFunction
-
-# be sure to fill these in with your correct machine names:
-# AddToMenu Remote-Logins	"dopey"	 Exec ssh dopey rxvt -display $HOSTDISPLAY &
-# +			"snoopy" Exec ssh snoopy rxvt -display $HOSTDISPLAY &
-# +			"grumpy" Exec ssh grumpy rxvt -display $HOSTDISPLAY &
-# +			"happy"	 Exec ssh happy rxvt -display $HOSTDISPLAY &
-# +			"bailey" Exec ssh bailey rxvt -display $HOSTDISPLAY &
-# +			"barnum" Exec ssh barnum rxvt -display $HOSTDISPLAY &
-# +			"joker"	 Exec ssh joker rxvt -display $HOSTDISPLAY &
-# +			"signal" Exec rxterm signal
 
 AddToMenu Module-Popup	"FvwmModules"	Title
 +			"Identify"	Module	FvwmIdent
@@ -214,12 +191,6 @@ AddToFunc PrintReverseFunction  I Raise
 AddToFunc Iconify-and-Raise     I Iconify
 +                               I Raise
 
-# RLOGIN machine fg bg
-AddToFunc RLOGIN I Exec xterm -fg $1 -bg $2 -e rlogin $0 -8
-
-# TELNET machine fg bg
-AddToFunc TELNET I Exec xterm -fg $1 -bg $2 -e telnet $0
-
 AddToFunc FocusAndWarp I Focus
 +                      I WarpToWindow 2p 2p
 
@@ -239,182 +210,27 @@ AddToFunc ChangeDefaultFocus I Style * $0
 *FvwmButtons: (1x2 Frame 0 Container(Rows 2 Columns 2 Frame 0))
 *FvwmButtons: (End)
 *FvwmButtons: (End)
-
-########################## Icon Manager ####################################
-# this FvwmIconMan setup is for swallowing in above button bar example
-*FvwmIconMan: numManagers 1
-*FvwmIconMan: Resolution  page
-*FvwmIconMan: background  bisque3
-*FvwmIconMan: foreground  black
-*FvwmIconMan: font        7x13bold
-*FvwmIconMan: format      "%t"
-*FvwmIconMan: action      Mouse   1 N sendcommand Focus, sendcommand "Iconify"
-*FvwmIconMan: action      Mouse   2 N sendcommand "Iconify 1"
-*FvwmIconMan: action      Mouse   3 N sendcommand "FvwmIdent"
-*FvwmIconMan: followfocus true
-*FvwmIconMan: sort        name
-*FvwmIconMan: plainbutton          up black bisque3
-*FvwmIconMan: selectbutton         down black bisque3
-*FvwmIconMan: focusbutton          up yellow firebrick
-*FvwmIconMan: focusandselectButton down yellow firebrick
-*FvwmIconMan: dontshow icon=Untitled title=Untitled
-#*FvwmIconMan: drawicons true
-*FvwmIconMan: buttongeometry  300x0
-*FvwmIconMan: managergeometry 1x5
-
-########################## Window-Identifier ###############################
-# Just choose colors and a fonts
-*FvwmIdent: Back MidnightBlue
-*FvwmIdent: Fore Yellow
-*FvwmIdent: Font -adobe-helvetica-medium-r-*-*-12-*-*-*-*-*-*-*
-
-########################### Pager #########################################
-*FvwmPager: Back #908090
-*FvwmPager: Fore #484048
-#*FvwmPager: Font -adobe-helvetica-bold-r-*-*-10-*-*-*-*-*-*-*
-# turn off desktop names for swallowing in above button bar example:
-*FvwmPager: Font none
-*FvwmPager: Hilight #cab3ca
-*FvwmPager: Geometry -1-1
-*FvwmPager: Label 0 Misc
-*FvwmPager: Label 1 Maker
-*FvwmPager: Label 2 Mail
-*FvwmPager: Label 3 Matlab
-*FvwmPager: SmallFont 5x8
-*FvwmPager: Balloons            All
-*FvwmPager: BalloonBack         Yellow
-*FvwmPager: BalloonFore         Black
-*FvwmPager: BalloonFont         lucidasanstypewriter-12
-*FvwmPager: BalloonYOffset      +2
-*FvwmPager: BalloonBorderWidth  1
-*FvwmPager: BalloonBorderColor  Black
-
-##########################FvwmWinList##################################
-*FvwmWinList: Back #908090
-*FvwmWinList: Fore Black
-*FvwmWinList: Font -adobe-helvetica-bold-r-*-*-10-*-*-*-*-*-*-*
-*FvwmWinList: Action Click1 Iconify -1,Focus
-*FvwmWinList: Action Click2 Iconify
-*FvwmWinList: Action Click3 Module "FvwmIdent" FvwmIdent
-*FvwmWinList: UseSkipList
-*FvwmWinList: Geometry +0-1
-
-
-*FvwmBacker: Desk 0 -solid steelblue
-*FvwmBacker: Desk 1 -solid midnightblue
-
-*FvwmScroll: Back grey40
-*FvwmScroll: Fore green
-
-############################################################
-############################################################
-# Note that icons are shown in the module
-#    only if !Icon commnand is applied.
-#Style     *  !Icon
-
-############################################################
-*FvwmIconBox: IconBack    #cfcfcf
-*FvwmIconBox: IconHiFore  black
-*FvwmIconBox: IconHiBack  LightSkyBlue
-*FvwmIconBox: Back        #5f9ea0
-#*FvwmIconBox: Fore       blue
-*FvwmIconBox: Geometry    5x1+0+0
-*FvwmIconBox: MaxIconSize 64x38
-*FvwmIconBox: Font        -adobe-helvetica-medium-r-*-*-12-*-*-*-*-*-*-*
-*FvwmIconBox: SortIcons   IconName
-*FvwmIconBox: Padding     4
-*FvwmIconBox: Lines       10
-*FvwmIconBox: SBWidth     11
-*FvwmIconBox: Placement   Left Top
-*FvwmIconBox: Pixmap      fvwm.xpm
-#*FvwmIconBo: xHideSC Horizontal
-*FvwmIconBox: SetWMIconSize
-*FvwmIconBox: HilightFocusWin
-#*FvwmIconBox: Resolution          Desk
-*FvwmIconBox: Mouse       1       Click           RaiseLower
-*FvwmIconBox: Mouse       1       DoubleClick     Iconify
-*FvwmIconBox: Mouse       2       Click           Iconify -1, Focus
-*FvwmIconBox: Mouse       3       Click           Module FvwmIdent
-*FvwmIconBox: Key         r       RaiseLower
-*FvwmIconBox: Key         space   Iconify
-*FvwmIconBox: Key         d       Close
-*FvwmIconBox: Key         n       Next
-*FvwmIconBox: Key         p       Prev
-*FvwmIconBox: Key         h       Left
-*FvwmIconBox: Key         j       Down
-*FvwmIconBox: Key         k       Up
-*FvwmIconBox: Key         l       Right
-#
-# Icon file specifications
-#
-# Mostly, you don't have to specify icon files, as FvwmIconBox now
-# reads icon files specified in Style commands.
-#
 *FvwmIconBox            "Fvwm*"         -
 
-# FvwmForm alias - rlogin or telnet to host via xterm
-*Rlogin: WarpPointer
-*Rlogin: Font         *helvetica*m*r*n*12*
-*Rlogin: ButtonFont   *helvetica*m*o*n*12*
-*Rlogin: InputFont    *cour*m*r*n*12*
-*Rlogin: Fore         Black
-*Rlogin: Back         Light Gray
-*Rlogin: ItemFore          Wheat
-*Rlogin: ItemBack          Gray50
-# begin items
-*Rlogin: Line         center
-*Rlogin: Text         "Login to Remote Host"
-*Rlogin: Line         center
-*Rlogin: Text         "Host:"
-*Rlogin: Input        HostName  30   ""
-*Rlogin: Line         center
-*Rlogin: Selection    meth single
-*Rlogin: Choice       TN TN off "telnet"
-*Rlogin: Choice       RL RL on "rlogin"
-*Rlogin: Selection    UserSel   single
-#*Rlogin: Choice       Default   Default   on   "same user"
-#*Rlogin: Choice       Custom    Custom    off  "user:"
-*Rlogin: Text         "(Userid:"
-*Rlogin: Input        UserName  10   ""
-*Rlogin: Text         ")"
-*Rlogin: Line         center
-*Rlogin: Text         "FG:"
-*Rlogin: Input        FgColor 15 ""
-*Rlogin: Text         "BG:"
-*Rlogin: Input        BgColor 15 ""
-*Rlogin: Line         expand
-*Rlogin: Button       quit "Login" ^M
-*Rlogin: Command Exec xterm  $(FgColor?-fg $(FgColor)) $(BgColor?-bg $(BgColor)) -T xterm@$(HostName) -e $(RL?rlogin) $(TN?telnet) $(HostName) $(RL?-8 $(UserName?-l $(UserName)))
-*Rlogin: Button       restart   "Clear"
-*Rlogin: Command Beep
-*Rlogin: Button       quit "Cancel"
-*Rlogin: Command Nop
-
-# FvwmForm alias - query exit ala mwm
-*QuitVerify: GrabServer
-*QuitVerify: WarpPointer
-*QuitVerify: Font          terminus-ttf
-*QuitVerify: ButtonFont    7x13bold
-*QuitVerify: Fore          Black
-*QuitVerify: Back          Light Gray
-*QuitVerify: ItemFore Wheat
-*QuitVerify: ItemBack Gray50
-# begin items
-*QuitVerify: Line          center
-*QuitVerify: Text          "Do you really want to exit fvwm?"
-*QuitVerify: Line          expand
-*QuitVerify: Button   quit      " Exit "
-*QuitVerify: Command  Quit
-*QuitVerify: Button   quit      "Cancel"
-*QuitVerify: Command  Nop
-
-# to change banner pixmap
-#*FvwmBanner: Pixmap fvwm3.xpm
-#*FvwmBanner: Timeout 2
-
-# Keybinds I added 
+################## Some nice keybinds ###################
 # Alt + F to go fullscreen or go back
-Key f A M Maximize
+Key f A M TrueFullScreen 
+
 # Alt + j/k move between windows
-Key k A M Next (AcceptsFocus) Raise
-Key j A M Prev (AcceptsFocus) Raise
+Key k A M Next (CurrentDesk, AcceptsFocus) SwitchFocus 
+Key j A M Prev (CurrentDesk, AcceptsFocus) SwitchFocus 
+
+DestroyFunc SwitchFocus
+AddToFunc SwitchFocus
++ I Iconify off
++ I FlipFocus
++ I Raise
++ I WarpToWindow !raise 5 5
+
+DestroyFunc TrueFullScreen 
+AddToFunc TrueFullScreen 
++ I ThisWindow (Maximized) DestroyWindowStyle
++ I TestRc (NoMatch) WindowStyle !Title, !Handles, !Borders, ResizeHintOverride, !Iconifiable, FixedPosition, FixedSize
++ I UpdateStyles
++ I ThisWindow (Maximized) Maximize
++ I TestRc (NoMatch) Maximize ewmhiwa 100 100
