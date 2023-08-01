@@ -1,28 +1,25 @@
 XTerm*loginShell:true
-
-! Uncomment for the green theme
-!XTerm*foreground: #33ff66
-
-! Uncomment for the orange theme
-XTerm*foreground: #ff8700
-
-! Background always black
-XTerm*background: #000000
-
-! Fonts
-XTerm*faceName: xos4 Terminus 
-XTerm*faceSize: 10 
-
-! Scroll bar is annoying
 XTerm*ScrollBar: false
-
-! Uncomment for green theme
-!XTerm*color2: #33ff66
-
-! Uncomment for orange theme
-XTerm*color2: #ff8700
-
-! Yellow
 XTerm*color3: #ffff33
-
 XTerm*selectToClipboard: true
+
+!### MS DOS THEME ###
+XTerm*foreground: #ffffff
+XTerm*background: #0008ea
+XTerm*color2: #ffffff
+XTerm*faceName: Perfect DOS VGA 437 
+XTerm*faceSize: 12 
+
+!### GREEN THEME ###
+!XTerm*foreground: #33ff66
+!XTerm*background: #000000
+!XTerm*color2: #33ff66
+!XTerm*faceName: xos4 Terminus 
+!XTerm*faceSize: 10 
+
+!### ORANGE THEME ###
+!XTerm*foreground: #ff8700
+!XTerm*background: #000000
+!XTerm*color2: #ff8700
+!XTerm*faceName: xos4 Terminus 
+!XTerm*faceSize: 10 
