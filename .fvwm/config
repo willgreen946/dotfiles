@@ -5,28 +5,7 @@ ClickTime 750
 DeskTopSize 2x2
 
 ColormapFocus FollowsMouse
-TitleStyle Inactive HGradient 20 blue blue -- Sunk 
-
-# default Styles:
-Style *           Font xos4 Terminus 
-Style *           IconFont xos4 Terminus 
-Style *           HilightFore white, HilightBack red 
-Style *           BorderWidth 2, HandleWidth 8 
-Style *           Icon unknown1.xpm, Color white 
-Style *           MWMFunctions, MWMDecor, HintOverride
-Style *           DecorateTransient, !UsePPosition
-Style *           IconBox 0 -10 -280 -1
-Style *           FocusFollowsMouse
-Style *           TileCascadePlacement
-
-# Styles for various Fvwm modules:
-Style "Fvwm*"       !Title,  Sticky, WindowListSkip
-Style "Fvwm*"       BorderWidth 8, CirculateSkipIcon, CirculateSkip
-Style "FvwmPager"   StaysOnTop
-Style "FvwmBanner"  StaysOnTop
-Style "FvwmButtons" Icon toolbox.xpm, ClickToFocus
-
-#   for other parts of the window/borders/icons:
+# for other parts of the window/borders/icons:
 Mouse 1	F	A	Resize-or-Raise
 Mouse 1	TS	A	Move-or-Raise
 Mouse 1	I	A	Move-or-Iconify
@@ -90,10 +69,12 @@ AddToFunc ChangeDefaultFocus I Style * $0
 ################## Some nice keybinds ###################
 Key f A M TrueFullScreen 
 Key r A M Restart
+Key q A M Close
 Key b A M Exec qutebrowser
 Key w A M Exec wpa_gui
 Key t A M Exec xterm
 Key h A M Exec xterm -T htop -e htop
+Key u A M Exec uxterm 
 Key k A M Next (CurrentDesk, AcceptsFocus) SwitchFocus 
 Key j A M Prev (CurrentDesk, AcceptsFocus) SwitchFocus 
 
