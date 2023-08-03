@@ -1,0 +1,21 @@
+! My .Xdefault/.Xresources file
+! For theming uncomment the color scheme you want to use
+! Global variables at the top
+
+XTerm*loginShell: true
+XTerm*ScrollBar: false
+XTerm*color3: #ffff33
+XTerm*selectToClipboard: true
+
+!### MS DOS THEME ###
+XTerm*foreground: #ffffff
+XTerm*background: #0008ea
+XTerm*color2: #ffffff
+XTerm*faceName: Perfect DOS VGA 437 
+XTerm*faceSize: 12 
+UXTerm*foreground: #ffffff
+UXTerm*background: #0008ea
+UXTerm*color2: #ffffff
+UXTerm*faceName: Perfect DOS VGA 437 
+UXTerm*faceSize: 12 
+!### END ###
