@@ -101,6 +101,7 @@ Key w A 4 Exec wpa_gui
 Key t A 4 Exec xterm
 Key h A 4 Exec xterm -T htop -e htop
 Key u A 4 Exec uxterm 
+Key v A 4 Exec xterm -T vifm -e vifm
 Key k A 4 Next (CurrentDesk, AcceptsFocus) SwitchFocus 
 Key j A 4 Prev (CurrentDesk, AcceptsFocus) SwitchFocus 
 key 0 A 4 GotoDesk 0 0
