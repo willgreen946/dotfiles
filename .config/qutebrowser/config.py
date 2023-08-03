@@ -6,6 +6,10 @@ config.set("colors.webpage.darkmode.enabled", True)
 # javascript is cringe
 config.set("content.javascript.enabled", False)
 
+# disable history coz read writes I geuss
+config.set("completion.web_history.max_items", 0)
+config.set("completion.cmd_history_max_items", 0)
+
 # terminus is the most elite font 
 c.fonts.completion.entry = "8pt xos4 Terminus"
 c.fonts.completion.category = "bold 8pt xos4 Terminus"
