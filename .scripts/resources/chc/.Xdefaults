@@ -12,11 +12,13 @@ XTerm*selectToClipboard: true
 !XTerm*background: #0008ea
 !XTerm*color2: #ffffff
 !XTerm*faceName: Perfect DOS VGA 437 
+XTerm*faceName: Fixedsys Excelsior 
 !XTerm*faceSize: 12 
 !UXTerm*foreground: #ffffff
 !UXTerm*background: #0008ea
 !UXTerm*color2: #ffffff
 !UXTerm*faceName: Perfect DOS VGA 437 
+!UXTerm*faceName: Fixedsys Excelsior 
 !UXTerm*faceSize: 12 
 !### END ###
 
