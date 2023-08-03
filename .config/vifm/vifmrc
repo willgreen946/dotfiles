@@ -1,0 +1,16 @@
+set vicmd=nvi
+" Colorscheme
+colorscheme theme 
+" View pane
+view
+nnoremap <C-t> :shell
+" Normal mode commands
+:normal zo <C-c>
+filextype *.pdf mupdf %f &
+filextype *.mp3 mpv %f
+filextype *.jpg feh %f &
+filextype *.png feh %f &
+filextype *.svg feh %f &
+filextype *.gif feh %f &
+filextype *.bmp feh %f &
+only
