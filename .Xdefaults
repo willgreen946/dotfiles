@@ -8,24 +8,28 @@ XTerm*color3: #ffff33
 XTerm*selectToClipboard: true
 
 !### MS DOS THEME ###
-XTerm*foreground: #ffffff
-XTerm*background: #0008ea
-XTerm*color2: #ffffff
-XTerm*faceName: Perfect DOS VGA 437 
-XTerm*faceSize: 12 
+!XTerm*foreground: #ffffff
+!XTerm*background: #0008ea
+XTerm*background: #051db5
+!XTerm*color2: #ffffff
+!XTerm*faceName: Perfect DOS VGA 437 
+XTerm*faceName: Fixedsys Excelsior 
+!XTerm*faceSize: 12 
 !UXTerm*foreground: #ffffff
 !UXTerm*background: #0008ea
+UXTerm*background: #051db5
 !UXTerm*color2: #ffffff
 !UXTerm*faceName: Perfect DOS VGA 437 
+!UXTerm*faceName: Fixedsys Excelsior 
 !UXTerm*faceSize: 12 
 !### END ###
 
 !### GREEN THEME ###
-!XTerm*foreground: #33ff66
-!XTerm*background: #000000
-!XTerm*color2: #33ff66
-!XTerm*faceName: xos4 Terminus 
-!XTerm*faceSize: 10 
+XTerm*foreground: #33ff66
+XTerm*background: #000000
+XTerm*color2: #33ff66
+XTerm*faceName: xos4 Terminus 
+XTerm*faceSize: 10 
 !UXTerm*foreground: #33ff66
 !UXTerm*background: #000000
 !UXTerm*color2: #33ff66
@@ -42,6 +46,6 @@ XTerm*faceSize: 12
 UXTerm*foreground: #ff8700
 UXTerm*background: #000000
 UXTerm*color2: #ff8700
-UXTerm*faceName: xos4 Terminus 
-UXTerm*faceSize: 10 
+!UXTerm*faceName: xos4 Terminus 
+!UXTerm*faceSize: 10 
 !### END ###
