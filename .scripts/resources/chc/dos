@@ -9,13 +9,15 @@ XTerm*selectToClipboard: true
 
 !### MS DOS THEME ###
 XTerm*foreground: #ffffff
-XTerm*background: #0008ea
+!XTerm*background: #0008ea
+XTerm*background: #051db5
 XTerm*color2: #ffffff
 !XTerm*faceName: Perfect DOS VGA 437 
 XTerm*faceName: Fixedsys Excelsior 
 XTerm*faceSize: 12 
 UXTerm*foreground: #ffffff
-UXTerm*background: #0008ea
+!UXTerm*background: #0008ea
+UXTerm*background: #051db5
 UXTerm*color2: #ffffff
 !UXTerm*faceName: Perfect DOS VGA 437 
 UXTerm*faceName: Fixedsys Excelsior 
