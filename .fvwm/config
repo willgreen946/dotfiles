@@ -4,6 +4,44 @@ ClickTime 750
 
 DeskTopSize 2x2
 
+DefaultFont "xft:xos4 Terminus:Regular:size=12:antialias=True"
+
+#   1 - inactive Windows 
+#   2 - Active Window
+#   3 - Inactive Windows Borders
+#   4 - Active Windows Borders
+Colorset 1 fg white, bg Blue3 hi #40B0F0
+Colorset 2 fg white, bg #cd0000, hi #40b0f0
+Colorset 3 fg white, bg #c3c3c3
+Colorset 4 fg white, bg #c3c3c3
+
+Style * Colorset 1, HilightColorset 2, \
+        BorderColorset 3, HilightBorderColorset 4, \
+        BorderWidth 0, HandleWidth 5, \
+        FvwmBorder, FirmBorder, \
+        MWMButtons, UseDecor MyDec 
+
+Style * EdgeMoveDelay 350, EdgeMoveResistance 350
+Style * BorderWidth 0
+
+AddToDecor MyDec
+#+ TitleStyle AllInactive Solid grey51
++ TitleStyle AllInactive HGradient 128 grey40 grey
++ TitleStyle Active      HGradient 128 Red4 Red
++ ButtonStyle All Simple -- UseTitleStyle
++ AddButtonStyle All   AllInactive Solid grey51
++ AddButtonStyle Left  AllActive   Solid Blue4
++ AddButtonStyle Right AllActive   Solid DeepSkyBlue
++ BorderStyle Simple -- HiddenHandles NoInset Raised
++ TitleStyle      LeftJustified
++ TitleStyle      -- Flat
++ ButtonStyle     All -- Flat
++ ButtonStyle All - Clear
++ ButtonStyle 1 - MwmDecorMenu
++ ButtonStyle 6 - MwmDecorMin
++ ButtonStyle 4 - MwmDecorMax
++ TitleStyle Height 18
+
 ColormapFocus FollowsMouse
 # for other parts of the window/borders/icons:
 Mouse 1	F	A	Resize-or-Raise
@@ -54,29 +92,23 @@ AddToFunc DeiconifyFocusAndWarp I Iconify -1
 AddToFunc ChangeDefaultFocus I Style * $0
 +                            I Recapture
 
-################## FvwmButtons button-bar ################################
-*FvwmButtons: Geometry 520x100-1-1
-*FvwmButtons: Back bisque3
-*FvwmButtons: (Frame 2 Padding 2 2 Container(Rows 2 Columns 5 Frame 1 \
-                                             Padding 10 0))
-*FvwmButtons: (3x2 Frame 2 Swallow "FvwmIconMan" "Module FvwmIconMan")
-*FvwmButtons: (1x2 Frame 2 Swallow(UseOld) "FvwmPager" "Module FvwmPager 0 0")
-*FvwmButtons: (1x2 Frame 0 Container(Rows 2 Columns 2 Frame 0))
-*FvwmButtons: (End)
-*FvwmButtons: (End)
-*FvwmIconBox            "Fvwm*"         -
-
 ################## Some nice keybinds ###################
-Key f A M TrueFullScreen 
-Key r A M Restart
-Key q A M Close
-Key b A M Exec qutebrowser
-Key w A M Exec wpa_gui
-Key t A M Exec xterm
-Key h A M Exec xterm -T htop -e htop
-Key u A M Exec uxterm 
-Key k A M Next (CurrentDesk, AcceptsFocus) SwitchFocus 
-Key j A M Prev (CurrentDesk, AcceptsFocus) SwitchFocus 
+Key f A 4 TrueFullScreen 
+Key r A 4 Restart
+Key q A 4 Close
+Key b A 4 Exec qutebrowser
+Key w A 4 Exec wpa_gui
+Key t A 4 Exec xterm
+Key h A 4 Exec xterm -T htop -e htop
+Key u A 4 Exec uxterm 
+Key k A 4 Next (CurrentDesk, AcceptsFocus) SwitchFocus 
+Key j A 4 Prev (CurrentDesk, AcceptsFocus) SwitchFocus 
+key 0 A 4 GotoDesk 0 0
+Key 1 A 4 GotoDesk 1 0 
+Key 2 A 4 GotoDesk 2 0
+Key 3 A 4 GotoDesk 0 1 
+Key 4 A 4 GotoDesk 1 1
+Key 5 A 4 GotoDesk 2 1
 
 DestroyFunc SwitchFocus
 AddToFunc SwitchFocus
