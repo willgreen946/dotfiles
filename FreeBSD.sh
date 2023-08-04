@@ -1,13 +1,13 @@
 # Install script for packages on FreeBSD
 
 # System tools
-pkg install git doas lsblk tmux wget curl tty-clock ncdu transmission-gtk
+pkg install git doas lsblk tmux wget curl tty-clock ncdu
 
 # Audio
 pkg install mixer mixertui
 
 # X11 Programs
-pkg install xorg qutebrowser xsel-conrad wpa_supplicant_gui mpv mupdf fvwm3
+pkg install xorg qutebrowser xsel-conrad wpa_supplicant_gui mpv mupdf fvwm3 transmission-gtk feh
 
 # Browsers 
 pkg install qutebrowser w3m
@@ -28,13 +28,14 @@ pkg install gcc tcc gdb cgdb gnustep nasm groff gmake
 
 # Fun stuff if you want fun stuff
 # pkg install vitetris cointop 
+# pkg install lmms mixxx
 
 # Add user to operator group
 # Remember user must be in wheel and operator group for best experience
 pw groupmod operator -m will
 
-# Remeber to compile htop-vim from source
+# Remember to compile htop-vim from source
 # Uncomment if you didnt install the ports tree at first install
 # git clone https://git.FreeBSD.org/ports.git /usr/ports
 
-git clone https://github.com/africavoid/dots-freebsd
+# git clone https://github.com/africavoid/dots-freebsd
