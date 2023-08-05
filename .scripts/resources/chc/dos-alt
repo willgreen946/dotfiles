@@ -12,11 +12,12 @@ XTerm*foreground: #ffffff
 !XTerm*background: #0008ea
 XTerm*background: #051db5
 XTerm*color2: #ffffff
-XTerm*faceName: Fixedsys Excelsior 
+XTerm*faceName: Perfect DOS VGA 437 
 XTerm*faceSize: 12 
 UXTerm*foreground: #ffffff
+!UXTerm*background: #0008ea
 UXTerm*background: #051db5
 UXTerm*color2: #ffffff
-UXTerm*faceName: Fixedsys Excelsior 
+UXTerm*faceName: Perfect DOS VGA 437 
 UXTerm*faceSize: 12 
 !### END ###

@@ -7,16 +7,15 @@ XTerm*ScrollBar: false
 XTerm*color3: #ffff33
 XTerm*selectToClipboard: true
 
-!### MS DOS THEME ###
-XTerm*foreground: #ffffff
-!XTerm*background: #0008ea
-XTerm*background: #051db5
-XTerm*color2: #ffffff
+!### ORANGE THEME ###
+XTerm*foreground: #ff8700
+XTerm*background: #000000
+XTerm*color2: #ff8700
 XTerm*faceName: Fixedsys Excelsior 
-XTerm*faceSize: 12 
-UXTerm*foreground: #ffffff
-UXTerm*background: #051db5
-UXTerm*color2: #ffffff
+XTerm*faceSize: 12
+UXTerm*foreground: #ff8700
+UXTerm*background: #000000
+UXTerm*color2: #ff8700
 UXTerm*faceName: Fixedsys Excelsior 
 UXTerm*faceSize: 12 
 !### END ###
