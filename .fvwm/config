@@ -104,12 +104,14 @@ Key u A 4 Exec uxterm
 Key v A 4 Exec xterm -T vifm -e vifm
 Key k A 4 Next (CurrentDesk, AcceptsFocus) SwitchFocus 
 Key j A 4 Prev (CurrentDesk, AcceptsFocus) SwitchFocus 
+Key i A 4 Iconify
 key 0 A 4 GotoDesk 0 0
 Key 1 A 4 GotoDesk 1 0 
 Key 2 A 4 GotoDesk 2 0
 Key 3 A 4 GotoDesk 0 1 
 Key 4 A 4 GotoDesk 1 1
 Key 5 A 4 GotoDesk 2 1
+##########################################################
 
 DestroyFunc SwitchFocus
 AddToFunc SwitchFocus
