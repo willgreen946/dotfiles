@@ -1,7 +1,12 @@
 config.load_autoconfig(False)
 
 # light mode is cringe
-config.set("colors.webpage.darkmode.enabled", True)
+#config.set("colors.webpage.darkmode.enabled", True)
+
+# Bar control
+config.set("tabs.show", "switching")
+config.set("tabs.position", "left")
+config.set("statusbar.show", "never")
 
 # javascript is cringe
 config.set("content.javascript.enabled", False)
