@@ -23,9 +23,8 @@ syntax off
 " Re/mappings 
 nnoremap <C-p> :bprevious <Enter>
 nnoremap <C-n> :bnext <Enter>
-nnoremap <C-w> :tabNext <Enter>
-nnoremap <C-e> :tabprevious <Enter>
-nnoremap <C-a> :Lexplore<Enter>
+nnoremap <C-x> :tabNext <Enter>
+nnoremap <C-c> :tabprevious <Enter>
 nnoremap <C-l> :Lexplore<Enter>
 nnoremap <C-s> :terminal ++rows=10<Enter>
 
