@@ -27,14 +27,17 @@ pkg install qutebrowser w3m
 # Fonts
 pkg install terminus-font terminus-ttf
 
-# vi like programs 
+# vi like programs (good to have them all)
 pkg install vim vifm neovim
+#pkg install neovim-qt
 
 # Compilers / Programming
-pkg install gcc tcc gdb cgdb nasm groff gmake pkgconf
+pkg install gcc tcc gdb cgdb nasm groff gmake pkgconf sdl2
 
 # May/May not need
 # pkg install gnustep libobjc2 transmission-gtk bvi
+# Mono is for C# 
+# pkg install mono
 
 # Uncomment For intel GPU 
 pkg install mesa-dri drm-kmod mesa-libs libva-intel-driver xf86-video-intel
@@ -43,6 +46,10 @@ sysrc -f /etc/rc.conf kld_list+=i915kms
 
 # installing dotfiles
 git clone https://github.com/africavoid/dots-freebsd
+mkdir -p .vim/pack/vendor/start/
+cd .vim/pack/vendor/start/
+git clone https://github.com/africavoid/lightline.vim
+cd $HOME
 
 ##################################################################################
 #										 #
