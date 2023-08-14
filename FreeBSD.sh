@@ -4,11 +4,11 @@
 # | |_| |/ _ \ | |/ _ \   \ \ /\ / / _ \| '__| |/ _` | #
 # |  _  |  __/ | | (_) |   \ V  V / (_) | |  | | (_| | #
 # |_| |_|\___|_|_|\___/     \_/\_/ \___/|_|  |_|\__,_| #
-#						       #
+#													   #
 ########################################################
-#						       #
-# You will more than likely need this stuff	       #
-#						       #
+#													   #
+# You will more than likely need this stuff			   #
+#													   #
 ########################################################
 # Install script for packages on FreeBSD
 
@@ -32,12 +32,10 @@ pkg install vim vifm neovim
 #pkg install neovim-qt
 
 # Compilers / Programming
-pkg install gcc tcc gdb cgdb nasm groff gmake pkgconf sdl2
+pkg install gcc tcc gdb cgdb nasm groff gmake pkgconf sdl2 mono
 
 # May/May not need
 # pkg install gnustep libobjc2 transmission-gtk bvi
-# Mono is for C# 
-# pkg install mono
 
 # Uncomment For intel GPU 
 pkg install mesa-dri drm-kmod mesa-libs libva-intel-driver xf86-video-intel
@@ -46,15 +44,11 @@ sysrc -f /etc/rc.conf kld_list+=i915kms
 
 # installing dotfiles
 git clone https://github.com/africavoid/dots-freebsd
-mkdir -p .vim/pack/vendor/start/
-cd .vim/pack/vendor/start/
-git clone https://github.com/africavoid/lightline.vim
-cd $HOME
 
 ##################################################################################
-#										 #
-#  Stuff you probably wont need but they're here none the less			 #
-#										 #
+#																				 #
+#  Stuff you probably wont need but they're here none the less					 #
+#																				 #
 ##################################################################################
 # Fun stuff if you want fun stuff
 # pkg install vitetris cointop 
