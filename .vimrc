@@ -21,12 +21,17 @@ highlight LineNr ctermfg='white'
 syntax off
 
 " Re/mappings 
+" Normal mode
 nnoremap <C-p> :bprevious <Enter>
 nnoremap <C-n> :bnext <Enter>
 nnoremap <C-x> :tabNext <Enter>
 nnoremap <C-c> :tabprevious <Enter>
 nnoremap <C-l> :Lexplore<Enter>
 nnoremap <C-s> :terminal ++rows=10<Enter>
+nnoremap <C-a> :vert terminal ++cols=50<Enter>
+
+" Terminal
+tnoremap <C-s> <C-\><C-n> "this is to escape terminal hell
 
 " Status line config
 highlight User1 ctermbg=0
