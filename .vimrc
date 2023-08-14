@@ -6,7 +6,15 @@ set backspace=indent
 set laststatus=2
 set showtabline=2
 set noshowmode
+set termguicolors
+set bg=dark
+colorscheme retrobox
+syntax on
 filetype indent plugin on
+
+" Change cursor type on insert mode
+let &t_SI = "\e[6 q"
+let &t_EI = "\e[2 q"
 
 " Guy on the internet said it's good for C programming 
 set tabstop=4
@@ -21,9 +29,6 @@ let g:netrw_winsize=20
 " Line numbers need to be white
 highlight LineNr ctermfg=white
 highlight LineNr guifg='white'
-
-" Don't like syntax highlighting
-syntax off
 
 " Re/mappings 
 " Normal mode

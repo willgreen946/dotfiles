@@ -7,9 +7,9 @@ XTerm*ScrollBar: false
 XTerm*color3: #ffff33
 XTerm*selectToClipboard: true
 
-!### MS DOS THEME ###
-XTerm*foreground: #ffffff
-XTerm*background: #051db5
+!### Retrobox ###
+XTerm*background: #1c1c1c
+XTerm*foreground: #ebdbb2 
 XTerm*faceName: Fixedsys Excelsior 
 XTerm*faceSize: 12 
 UXTerm*foreground: #ffffff
