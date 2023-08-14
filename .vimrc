@@ -6,6 +6,7 @@ set backspace=indent
 set laststatus=2
 set showtabline=2
 set noshowmode
+filetype indent plugin on
 
 " Guy on the internet said it's good for C programming 
 set tabstop=4
@@ -14,8 +15,12 @@ set softtabstop=4
 set autoindent
 set smartindent
 
+" So lex isn't fucking huge
+let g:netrw_winsize=20
+
 " Line numbers need to be white
-highlight LineNr ctermfg='white'
+highlight LineNr ctermfg=white
+highlight LineNr guifg='white'
 
 " Don't like syntax highlighting
 syntax off
@@ -26,21 +31,20 @@ nnoremap <C-p> :bprevious <Enter>
 nnoremap <C-n> :bnext <Enter>
 nnoremap <C-x> :tabNext <Enter>
 nnoremap <C-c> :tabprevious <Enter>
-nnoremap <C-l> :Lexplore<Enter>
-nnoremap <C-s> :terminal ++rows=10<Enter>
-nnoremap <C-a> :vert terminal ++cols=50<Enter>
+nnoremap <C-l> :vert Lexplore<Enter>
+nnoremap <C-s> :bo horizontal terminal ++rows=10<Enter>
 
 " Terminal
 tnoremap <C-s> <C-\><C-n> "this is to escape terminal hell
 
 " Status line config
-highlight User1 ctermbg=0
-highlight User2 ctermbg=0 ctermfg=2
-highlight User3 ctermbg=2 ctermfg=0
-highlight User4 ctermbg=2 ctermfg=0
-highlight User5 ctermbg=2 ctermfg=0
-highlight User6 ctermbg=2 ctermfg=0
-highlight User7 ctermbg=2 ctermfg=0
+highlight User1 ctermbg=black ctermfg=white
+highlight User2 ctermbg=black ctermfg=white
+highlight User3 ctermbg=white ctermfg=black
+highlight User4 ctermbg=white ctermfg=black
+highlight User5 ctermbg=white ctermfg=black
+highlight User6 ctermbg=white ctermfg=black
+highlight User7 ctermbg=white ctermfg=black
 
 let s:modes = {
 	\ 'n' : ['%3*', 'NORMAL'],
@@ -66,13 +70,13 @@ function! Statusline()
 	let status.="%2* %m"
 	let status.="%= "
 	let status.=" [buf %-1.3n]"
-	let status.="%1* [%04.l:%03.c]"
+	let status.="%2* [%04.l:%03.c]"
 	return status
 endfunction
 
 set statusline=%!Statusline()
 
 " Tab line config
-hi TabLineFill ctermfg=0 ctermbg=2
-hi TabLine ctermfg=0 ctermbg=2
-hi TabLineSel ctermfg=0 ctermbg=2
+hi TabLineFill ctermfg=black ctermbg=white
+hi TabLine ctermfg=black ctermbg=white
+hi TabLineSel ctermfg=black ctermbg=white
