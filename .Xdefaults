@@ -1,19 +1,15 @@
 ! My .Xdefault/.Xresources file
-! For theming uncomment the color scheme you want to use
-! Global variables at the top
 
 XTerm*loginShell: true
 XTerm*ScrollBar: false
-XTerm*color3: #ffff33
 XTerm*selectToClipboard: true
 
-!### Retrobox ###
-XTerm*background: #1c1c1c
-XTerm*foreground: #ebdbb2 
+! Gruv/Retrobox
+XTerm*background: #282828
+XTerm*foreground: #ebdbb2
 XTerm*faceName: Fixedsys Excelsior 
 XTerm*faceSize: 12 
 UXTerm*foreground: #ffffff
 UXTerm*background: #051db5
 UXTerm*faceName: Fixedsys Excelsior 
 UXTerm*faceSize: 12 
-!### END ###

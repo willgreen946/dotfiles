@@ -7,9 +7,14 @@ set laststatus=2
 set showtabline=2
 set noshowmode
 set termguicolors
-set bg=dark
+set cursorline
+
+" Colors
 colorscheme retrobox
+set bg=dark
 syntax on
+
+" C#
 filetype indent plugin on
 
 " Change cursor type on insert mode
@@ -30,16 +35,15 @@ let g:netrw_winsize=20
 highlight LineNr ctermfg=white
 highlight LineNr guifg='white'
 
-" Re/mappings 
-" Normal mode
-nnoremap <C-p> :bprevious <Enter>
-nnoremap <C-n> :bnext <Enter>
-nnoremap <C-x> :tabNext <Enter>
-nnoremap <C-c> :tabprevious <Enter>
+" Re/mappings for normal mode
+nnoremap <C-x> :bprevious <Enter>
+nnoremap <C-c> :bnext <Enter>
+nnoremap <C-p> :tabNext <Enter>
+nnoremap <C-n> :tabprevious <Enter>
 nnoremap <C-l> :vert Lexplore<Enter>
 nnoremap <C-s> :bo horizontal terminal ++rows=10<Enter>
 
-" Terminal
+" Re/mappings for the terminal
 tnoremap <C-s> <C-\><C-n> "this is to escape terminal hell
 
 " Status line config
@@ -50,6 +54,15 @@ highlight User4 ctermbg=white ctermfg=black
 highlight User5 ctermbg=white ctermfg=black
 highlight User6 ctermbg=white ctermfg=black
 highlight User7 ctermbg=white ctermfg=black
+
+highlight User1 guibg='#282828' guifg='#ebdbb2'
+highlight User2 guibg='#282828' guifg='#ebdbb2'
+highlight User3 guibg='#ebdbb2' guifg='#282828'
+highlight User4 guibg='#ebdbb2' guifg='#282828'
+highlight User5 guibg='#ebdbb2' guifg='#282828'
+highlight User6 guibg='#ebdbb2' guifg='#282828'
+highlight User7 guibg='#ebdbb2' guifg='#282828'
+
 
 let s:modes = {
 	\ 'n' : ['%3*', 'NORMAL'],
@@ -80,8 +93,3 @@ function! Statusline()
 endfunction
 
 set statusline=%!Statusline()
-
-" Tab line config
-hi TabLineFill ctermfg=black ctermbg=white
-hi TabLine ctermfg=black ctermbg=white
-hi TabLineSel ctermfg=black ctermbg=white
