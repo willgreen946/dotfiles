@@ -15,6 +15,7 @@ Colorset 2 fg white, bg #cd0000, hi #40b0f0
 Colorset 3 fg white, bg #c3c3c3
 Colorset 4 fg white, bg #c3c3c3
 
+
 Style * Colorset 1, HilightColorset 2, \
         BorderColorset 3, HilightBorderColorset 4, \
         BorderWidth 0, HandleWidth 5, \
@@ -27,7 +28,7 @@ Style * BorderWidth 0
 AddToDecor MyDec
 #+ TitleStyle AllInactive Solid grey51
 + TitleStyle AllInactive HGradient 128 grey40 grey
-+ TitleStyle Active      HGradient 128 Red4 Red
++ TitleStyle Active      HGradient 128 Blue4 Blue 
 + ButtonStyle All Simple -- UseTitleStyle
 + AddButtonStyle All   AllInactive Solid grey51
 + AddButtonStyle Left  AllActive   Solid Blue4
@@ -104,6 +105,7 @@ Key u A 4 Exec uxterm
 Key v A 4 Exec xterm -T vifm -e vifm
 Key k A 4 Next (CurrentDesk, AcceptsFocus) SwitchFocus 
 Key j A 4 Prev (CurrentDesk, AcceptsFocus) SwitchFocus 
+Key n A 4 Exec nvim-qt
 Key i A 4 Iconify
 key 0 A 4 GotoDesk 0 0
 Key 1 A 4 GotoDesk 1 0 
