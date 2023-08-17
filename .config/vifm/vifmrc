@@ -22,10 +22,10 @@ filextype *.svg feh %f &
 filextype *.gif feh %f &
 filextype *.bmp feh %f &
 filextype *.html qutebrowser %f &
-filextype *.c vim %f &
-filextype *.h vim %f &
-filextype *.cpp vim %f &
-filextype *.hpp vim %f &
-filextype *.cs vim %f &
-filextype *.m vim %f &
+filextype *.c vim %f
+filextype *.h vim %f
+filextype *.cpp vim %f
+filextype *.hpp vim %f
+filextype *.cs vim %f
+filextype *.m vim %f
 only
