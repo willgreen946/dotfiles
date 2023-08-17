@@ -1,16 +1,31 @@
+" Remember that za will toggle hidden files
+
+" Default editor
 set vicmd=nvi
+
 " Colorscheme
-colorscheme theme 
-" View pane
+colorscheme theme
+
+" Single pane
 view
-nnoremap <C-t> :shell
-" Normal mode commands
-:normal zo <C-c>
+
+" Ctrl t to enter shell
+nnoremap <C-t> :shell <CR>
+
+" Opening certain file types in certain programs
 filextype *.pdf mupdf %f &
 filextype *.mp3 mpv %f
+filextype *.mp4 mpv %f &
 filextype *.jpg feh %f &
 filextype *.png feh %f &
 filextype *.svg feh %f &
 filextype *.gif feh %f &
 filextype *.bmp feh %f &
+filextype *.html qutebrowser %f &
+filextype *.c vim %f &
+filextype *.h vim %f &
+filextype *.cpp vim %f &
+filextype *.hpp vim %f &
+filextype *.cs vim %f &
+filextype *.m vim %f &
 only
