@@ -29,6 +29,16 @@ pkg install terminus-font terminus-ttf
 
 # vi like programs (good to have them all)
 pkg install vim vifm neovim
+
+# vim install instructions for lsp
+# git clone https://github.com/a
+# git clone https://github.com/a
+# git clone https://github.com/a
+# git clone https://github.com/a
+# git clone https://github.com/a
+#
+# On FreeBSD you will need a symlink to clangd15 to clang
+ln -s /usr/local/bin/clangd15 /usr/local/bin/clangd
 #pkg install neovim-qt
 
 # Compilers / Programming

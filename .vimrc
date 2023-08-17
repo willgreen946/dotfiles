@@ -1,6 +1,5 @@
 " General startup stuff
 set number
-set wrap
 set lazyredraw
 set backspace=indent
 set laststatus=2
@@ -10,7 +9,8 @@ set termguicolors
 set cursorline
 
 " Colors
-colorscheme retrobox
+"colorscheme retrobox
+colorscheme darkblue
 set bg=dark
 syntax on
 
@@ -27,7 +27,7 @@ set shiftwidth=4
 set softtabstop=4
 set autoindent
 set smartindent
-
+set wrap
 " So lex isn't fucking huge
 let g:netrw_winsize=20
 
@@ -47,21 +47,21 @@ nnoremap <C-s> :bo horizontal terminal ++rows=10<Enter>
 tnoremap <C-s> <C-\><C-n> "this is to escape terminal hell
 
 " Status line config
-highlight User1 ctermbg=black ctermfg=white
-highlight User2 ctermbg=black ctermfg=white
-highlight User3 ctermbg=white ctermfg=black
-highlight User4 ctermbg=white ctermfg=black
-highlight User5 ctermbg=white ctermfg=black
-highlight User6 ctermbg=white ctermfg=black
-highlight User7 ctermbg=white ctermfg=black
+"highlight User1 ctermbg=black ctermfg=white
+"highlight User2 ctermbg=black ctermfg=white
+"highlight User3 ctermbg=white ctermfg=black
+"highlight User4 ctermbg=white ctermfg=black
+"highlight User5 ctermbg=white ctermfg=black
+"highlight User6 ctermbg=white ctermfg=black
+"highlight User7 ctermbg=white ctermfg=black
 
-highlight User1 guibg='#282828' guifg='#ebdbb2'
-highlight User2 guibg='#282828' guifg='#ebdbb2'
-highlight User3 guibg='#ebdbb2' guifg='#282828'
-highlight User4 guibg='#ebdbb2' guifg='#282828'
-highlight User5 guibg='#ebdbb2' guifg='#282828'
-highlight User6 guibg='#ebdbb2' guifg='#282828'
-highlight User7 guibg='#ebdbb2' guifg='#282828'
+"highlight User1 guibg='#282828' guifg='#ebdbb2'
+"highlight User2 guibg='#282828' guifg='#ebdbb2'
+"highlight User3 guibg='#ebdbb2' guifg='#282828'
+"highlight User4 guibg='#ebdbb2' guifg='#282828'
+"highlight User5 guibg='#ebdbb2' guifg='#282828'
+"highlight User6 guibg='#ebdbb2' guifg='#282828'
+"highlight User7 guibg='#ebdbb2' guifg='#282828'
 
 
 let s:modes = {
@@ -93,3 +93,14 @@ function! Statusline()
 endfunction
 
 set statusline=%!Statusline()
+
+" LSP 
+filetype plugin on
+
+function! s:on_lsp_buffer_enabled() abort
+	"setlocal omnifunc=lsp#complete
+	"setlocal signcolumn=yes
+	"if exists('+tagfunc') | setlocal tagfunc=lsp#tagfunc | endif
+
+	let g:lsp_format_sync_timeout = 100
+endfunction
