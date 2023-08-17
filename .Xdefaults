@@ -4,9 +4,9 @@ XTerm*loginShell: true
 XTerm*ScrollBar: false
 XTerm*selectToClipboard: true
 
-! Gruv/Retrobox
-XTerm*background: #282828
-XTerm*foreground: #ebdbb2
+! Dark Blue DOS kinda theme
+XTerm*background: #000040
+XTerm*foreground: #ffffff
 XTerm*faceName: Fixedsys Excelsior 
 XTerm*faceSize: 12 
 UXTerm*foreground: #ffffff
