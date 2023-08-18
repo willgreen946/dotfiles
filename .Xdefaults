@@ -7,9 +7,9 @@ XTerm*selectToClipboard: true
 ! Dark Blue DOS kinda theme
 XTerm*background: #000040
 XTerm*foreground: #ffffff
-XTerm*faceName: Fixedsys Excelsior 
+XTerm*faceName: ubuntu mono
 XTerm*faceSize: 12 
+UXTerm*background: #000040
 UXTerm*foreground: #ffffff
-UXTerm*background: #051db5
-UXTerm*faceName: Fixedsys Excelsior 
+UXTerm*faceName: ubuntu mono
 UXTerm*faceSize: 12 
