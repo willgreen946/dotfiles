@@ -23,6 +23,14 @@ syntax on
 " C#
 filetype indent plugin on
 
+" make vim auto include extra curley brace
+inoremap { {<CR>}<Esc>ko
+inoremap ( ()<Esc>ha
+inoremap [ []<Esc>ha
+inoremap " ""<Esc>ha
+inoremap ' ''<Esc>ha
+inoremap ` ``<Esc>ha
+
 " Change cursor type on insert mode
 let &t_SI = "\e[6 q"
 let &t_EI = "\e[2 q"
