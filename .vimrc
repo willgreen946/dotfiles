@@ -2,14 +2,20 @@
 set number
 set lazyredraw
 set backspace=indent
-set laststatus=2
+set laststatus=1
 set showtabline=2
-set noshowmode
+set showmode
 set termguicolors
 set cursorline
+set noshowmatch
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set autoindent
+set smartindent
+set wrap
 
 " Colors
-"colorscheme retrobox
 colorscheme darkblue
 set bg=dark
 syntax on
@@ -21,13 +27,8 @@ filetype indent plugin on
 let &t_SI = "\e[6 q"
 let &t_EI = "\e[2 q"
 
-" Guy on the internet said it's good for C programming 
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
-set autoindent
-set smartindent
-set wrap
+" Stop Annoying cursor jumping
+let g:loaded_matchparen=1
 
 " So lex isn't fucking huge
 let g:netrw_winsize=20
@@ -46,36 +47,6 @@ nnoremap <C-s> :bo horizontal terminal ++rows=10<Enter>
 
 " Re/mappings for the terminal
 tnoremap <C-s> <C-\><C-n> "this is to escape terminal hell
-
-let s:modes = {
-	\ 'n' : ['%3*', 'NORMAL'],
-	\ 'i' : ['%4*', 'INSERT'],
-	\ 'v' : ['%5*', 'VISUAL'],
-	\ 'r' : ['%6*', 'REPLACE'],
-	\ 'c' : ['%7*', 'COMMAND'],
-	\}
-
-function! ModeColor() abort
-	return get(s:modes, tolower(mode()), '%*')[0]
-endfunction
-
-function! CurrentMode() abort
-	return ' ' . get(s:modes, tolower(mode()), '-')[1] . ' '
-endfunction
-
-function! Statusline()
-	let status=""
-	let status.=ModeColor()
-	let status.=CurrentMode()
-	let status.="%1* %f"
-	let status.="%2* %m"
-	let status.="%= "
-	let status.=" [buf %-1.3n]"
-	let status.="%2* [%04.l:%03.c]"
-	return status
-endfunction
-
-set statusline=%!Statusline()
 
 " LSP 
 filetype plugin on
