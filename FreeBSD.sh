@@ -30,16 +30,13 @@ pkg install terminus-font terminus-ttf
 # vi like programs (good to have them all)
 pkg install vim vifm neovim
 
-# vim install instructions for lsp
-# git clone https://github.com/a
-# git clone https://github.com/a
-# git clone https://github.com/a
-# git clone https://github.com/a
-# git clone https://github.com/a
-#
 # On FreeBSD you will need a symlink to clangd15 to clang
 ln -s /usr/local/bin/clangd15 /usr/local/bin/clangd
-#pkg install neovim-qt
+
+# C# development on FreeBSD
+wget https://github.com/Thefrank/dotnet-freebsd-crossbuild/releases/download/v8.0.100-preview.7.23376.3/dotnet-sdk-8.0.100-preview.7.23376.3-freebsd-x64.tar.gz
+tar -xzvf dotnet-sdk-8.0.100-preview.7.23376.3-freebsd-x64.tar.gz
+ln -s /home/will/.dotnet/dotnet /usr/local/bin/dotnet
 
 # Compilers / Programming
 pkg install gcc tcc gdb cgdb nasm groff gmake pkgconf sdl2 mono
