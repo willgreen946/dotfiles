@@ -26,14 +26,14 @@ Style * EdgeMoveDelay 350, EdgeMoveResistance 350
 Style * BorderWidth 0
 
 AddToDecor MyDec
-#+ TitleStyle AllInactive Solid grey51
++ TitleStyle AllInactive Solid Red 
 + TitleStyle AllInactive HGradient 128 grey40 grey
-+ TitleStyle Active      HGradient 128 Blue4 Blue 
++ TitleStyle Active      HGradient 128 Red4 #ab2b28
 + ButtonStyle All Simple -- UseTitleStyle
 + AddButtonStyle All   AllInactive Solid grey51
 + AddButtonStyle Left  AllActive   Solid Blue4
 + AddButtonStyle Right AllActive   Solid DeepSkyBlue
-+ BorderStyle Simple -- HiddenHandles NoInset Raised
++ BorderStyle Simple -- HiddenHandles Inset Raised 
 + TitleStyle      LeftJustified
 + TitleStyle      -- Flat
 + ButtonStyle     All -- Flat
@@ -105,7 +105,7 @@ Key u A 4 Exec uxterm
 Key v A 4 Exec xterm -T vifm -e vifm
 Key k A 4 Next (CurrentDesk, AcceptsFocus) SwitchFocus 
 Key j A 4 Prev (CurrentDesk, AcceptsFocus) SwitchFocus 
-Key n A 4 Exec nvim-qt
+Key g A 4 Exec gvim 
 Key i A 4 Iconify
 key 0 A 4 GotoDesk 0 0
 Key 1 A 4 GotoDesk 1 0 
