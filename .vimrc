@@ -1,3 +1,11 @@
+
+"██╗   ██╗██╗███╗   ███╗██████╗  ██████╗
+"██║   ██║██║████╗ ████║██╔══██╗██╔════╝
+"██║   ██║██║██╔████╔██║██████╔╝██║     
+"╚██╗ ██╔╝██║██║╚██╔╝██║██╔══██╗██║     
+" ╚████╔╝ ██║██║ ╚═╝ ██║██║  ██║╚██████╗
+"  ╚═══╝  ╚═╝╚═╝     ╚═╝╚═╝  ╚═╝ ╚═════╝
+
 " General startup stuff
 set number
 set lazyredraw
@@ -14,6 +22,8 @@ set softtabstop=4
 set autoindent
 set smartindent
 set wrap
+set hlsearch
+set wildmenu
 
 " Colors
 colorscheme darkblue
@@ -52,6 +62,8 @@ nnoremap <C-p> :tabNext <Enter>
 nnoremap <C-n> :tabprevious <Enter>
 nnoremap <C-l> :vert Lexplore<Enter>
 nnoremap <C-s> :bo horizontal terminal ++rows=10<Enter>
+nnoremap <C-t> :tab ter<Enter>
+nnoremap <C-m> :make <Enter>
 
 " Re/mappings for the terminal
 tnoremap <C-s> <C-\><C-n> "this is to escape terminal hell
