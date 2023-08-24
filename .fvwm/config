@@ -4,7 +4,7 @@ ClickTime 750
 
 DeskTopSize 2x2
 
-DefaultFont "xft:xos4 Terminus:Regular:size=12:antialias=True"
+DefaultFont "Terminus:Regular:size=12:antialias=True"
 
 #   1 - inactive Windows 
 #   2 - Active Window
@@ -98,7 +98,9 @@ Key f A 4 TrueFullScreen
 Key r A 4 Restart
 Key q A 4 Close
 Key b A 4 Exec qutebrowser
+Key m A 4 Exec pcmanfm
 Key w A 4 Exec wpa_gui
+Key o A 4 Exec transmission-gtk
 Key t A 4 Exec xterm
 Key h A 4 Exec xterm -T htop -e htop
 Key u A 4 Exec uxterm 
@@ -106,6 +108,7 @@ Key v A 4 Exec xterm -T vifm -e vifm
 Key k A 4 Next (CurrentDesk, AcceptsFocus) SwitchFocus 
 Key j A 4 Prev (CurrentDesk, AcceptsFocus) SwitchFocus 
 Key g A 4 Exec gvim 
+Key p A 4 Exec pavucontrol
 Key i A 4 Iconify
 key 0 A 4 GotoDesk 0 0
 Key 1 A 4 GotoDesk 1 0 
