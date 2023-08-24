@@ -40,7 +40,7 @@ inoremap [ []<Esc>ha
 inoremap " ""<Esc>ha
 inoremap ' ''<Esc>ha
 inoremap ` ``<Esc>ha
-
+inoremap < <><Esc>ha
 " Change cursor type on insert mode
 let &t_SI = "\e[6 q"
 let &t_EI = "\e[2 q"
@@ -64,6 +64,8 @@ nnoremap <C-l> :vert Lexplore<Enter>
 nnoremap <C-s> :bo horizontal terminal ++rows=10<Enter>
 nnoremap <C-t> :tab ter<Enter>
 nnoremap <C-m> :make <Enter>
+nnoremap <C-i> :colorscheme shine <Enter>
+nnoremap <C-u> :colorscheme darkblue <Enter>
 
 " Re/mappings for the terminal
 tnoremap <C-s> <C-\><C-n> "this is to escape terminal hell
