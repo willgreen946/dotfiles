@@ -4,7 +4,7 @@ ClickTime 750
 
 DeskTopSize 2x2
 
-DefaultFont "Terminus:Regular:size=12:antialias=True"
+DefaultFont "xft:ubuntu mono:Regular:size=12:antialias=True"
 
 #   1 - inactive Windows 
 #   2 - Active Window
@@ -14,7 +14,6 @@ Colorset 1 fg white, bg Blue3 hi #40B0F0
 Colorset 2 fg white, bg #cd0000, hi #40b0f0
 Colorset 3 fg white, bg #c3c3c3
 Colorset 4 fg white, bg #c3c3c3
-
 
 Style * Colorset 1, HilightColorset 2, \
         BorderColorset 3, HilightBorderColorset 4, \
@@ -44,6 +43,7 @@ AddToDecor MyDec
 + TitleStyle Height 18
 
 ColormapFocus FollowsMouse
+
 # for other parts of the window/borders/icons:
 Mouse 1	F	A	Resize-or-Raise
 Mouse 1	TS	A	Move-or-Raise
