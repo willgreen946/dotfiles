@@ -25,6 +25,14 @@ set wrap
 set hlsearch
 set wildmenu
 
+" Gvim stuff
+set guifont="ubuntu mono"
+
+" Remove bars in GVim
+set guioptions-=m
+set guioptions-=T
+set guioptions-=r
+
 " Colors
 colorscheme darkblue
 set bg=dark
@@ -41,6 +49,10 @@ inoremap " ""<Esc>ha
 inoremap ' ''<Esc>ha
 inoremap ` ``<Esc>ha
 inoremap < <><Esc>ha
+
+" Change leader key
+let mapleader=","
+
 " Change cursor type on insert mode
 let &t_SI = "\e[6 q"
 let &t_EI = "\e[2 q"
@@ -64,11 +76,12 @@ nnoremap <C-l> :vert Lexplore<Enter>
 nnoremap <C-s> :bo horizontal terminal ++rows=10<Enter>
 nnoremap <C-t> :tab ter<Enter>
 nnoremap <C-m> :make <Enter>
-nnoremap <C-i> :colorscheme shine <Enter>
-nnoremap <C-u> :colorscheme darkblue <Enter>
+noremap <leader>i :colorscheme shine <Enter>
+noremap <leader>u :colorscheme darkblue <Enter>
 
 " Re/mappings for the terminal
-tnoremap <C-s> <C-\><C-n> "this is to escape terminal hell
+" This is to escape terminal hell
+tnoremap <C-s> <C-\><C-n> 
 
 " LSP 
 filetype plugin on
