@@ -16,17 +16,28 @@ set showmode
 set termguicolors
 set cursorline
 set noshowmatch
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
 set autoindent
 set smartindent
 set wrap
 set hlsearch
 set wildmenu
+set t_Co=256
+set term=xterm=256color
+
+" lsp
+packadd lsp
+call LspAddServer([#{
+	\    name: 'clangd',
+	\    filetype: ['c', 'cpp'],
+	\    path: '/usr/local/bin/clangd',
+	\    args: ['--background-index']
+	\ }])
 
 " Gvim stuff
-set guifont="ubuntu mono"
+set guifont=Ubuntu\ Mono\ Regular\ 12
 
 " Remove bars in GVim
 set guioptions-=m
@@ -34,14 +45,14 @@ set guioptions-=T
 set guioptions-=r
 
 " Colors
-colorscheme darkblue
+colorscheme solarized 
 set bg=dark
 syntax on
 
 " C#
 filetype indent plugin on
 
-" make vim auto include extra curley brace
+" Make vim auto include extra curley brace
 inoremap { {<CR>}<Esc>ko
 inoremap ( ()<Esc>ha
 inoremap [ []<Esc>ha
@@ -60,8 +71,14 @@ let &t_EI = "\e[2 q"
 " Stop Annoying cursor jumping
 let g:loaded_matchparen=1
 
-" So lex isn't fucking huge
+" So netrw isn't fucking huge
 let g:netrw_winsize=20
+
+" Get rid of the horrible banner in netrw
+let g:netrw_banner = 0
+
+" So netrw has the nice tree view 
+let g:netrw_liststyle=3
 
 " Line numbers need to be white
 highlight LineNr ctermfg=white
@@ -76,8 +93,12 @@ nnoremap <C-l> :vert Lexplore<Enter>
 nnoremap <C-s> :bo horizontal terminal ++rows=10<Enter>
 nnoremap <C-t> :tab ter<Enter>
 nnoremap <C-m> :make <Enter>
-noremap <leader>i :colorscheme shine <Enter>
+noremap <leader>i :colorscheme solarized <Enter>
 noremap <leader>u :colorscheme darkblue <Enter>
+noremap <leader>t :set showtabline=1<Enter>
+noremap <leader>r :set showtabline=0<Enter>
+noremap <leader>eh :LspDiagNext <Enter>
+noremap <leader>ea :LspDiagShow <Enter>
 
 " Re/mappings for the terminal
 " This is to escape terminal hell
