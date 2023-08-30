@@ -24,17 +24,11 @@ set smartindent
 set wrap
 set hlsearch
 set wildmenu
+set colorcolumn=80
 set t_Co=256
-set term=xterm=256color
 
-" lsp
-packadd lsp
-call LspAddServer([#{
-	\    name: 'clangd',
-	\    filetype: ['c', 'cpp'],
-	\    path: '/usr/local/bin/clangd',
-	\    args: ['--background-index']
-	\ }])
+" Folding
+set foldmethod=syntax
 
 " Gvim stuff
 set guifont=Ubuntu\ Mono\ Regular\ 12
@@ -47,6 +41,7 @@ set guioptions-=r
 " Colors
 colorscheme solarized 
 set bg=dark
+set background=dark
 syntax on
 
 " C#
@@ -59,7 +54,6 @@ inoremap [ []<Esc>ha
 inoremap " ""<Esc>ha
 inoremap ' ''<Esc>ha
 inoremap ` ``<Esc>ha
-inoremap < <><Esc>ha
 
 " Change leader key
 let mapleader=","
@@ -79,10 +73,6 @@ let g:netrw_banner = 0
 
 " So netrw has the nice tree view 
 let g:netrw_liststyle=3
-
-" Line numbers need to be white
-highlight LineNr ctermfg=white
-highlight LineNr guifg='white'
 
 " Re/mappings for normal mode
 nnoremap <C-x> :bprevious <Enter>
