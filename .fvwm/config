@@ -1,9 +1,20 @@
+DestroyFunc InitFunction
+AddToFunc InitFunction
++I Exec wbar &
+
+Exec wbar &
+
+# Mouse actions for moving between desktops
 EdgeResistance 250 10
 EdgeScroll 100 100
+EdgeThickness 1
+Style * EdgeMoveDelay 350, EdgeMoveResistance 350
 ClickTime 750
 
+# Size of the desktop
 DeskTopSize 2x2
 
+# Font for the window titles
 DefaultFont "xft:ubuntu mono:Regular:size=12:antialias=True"
 
 #   1 - inactive Windows 
@@ -29,20 +40,14 @@ AddToDecor MyDec
 + TitleStyle AllInactive HGradient 128 grey40 grey
 + TitleStyle Active      HGradient 128 Red4 #ab2b28
 + ButtonStyle All Simple -- UseTitleStyle
-+ AddButtonStyle All   AllInactive Solid grey51
-+ AddButtonStyle Left  AllActive   Solid Blue4
-+ AddButtonStyle Right AllActive   Solid DeepSkyBlue
++ AddButtonStyle All   AllInactive Solid grey
++ AddButtonStyle Left  AllActive   Solid #ab2b28 
++ AddButtonStyle Right AllActive   Solid #ab2b28 
 + BorderStyle Simple -- HiddenHandles Inset Raised 
 + TitleStyle      LeftJustified
 + TitleStyle      -- Flat
 + ButtonStyle     All -- Flat
-+ ButtonStyle All - Clear
-+ ButtonStyle 1 - MwmDecorMenu
-+ ButtonStyle 6 - MwmDecorMin
-+ ButtonStyle 4 - MwmDecorMax
 + TitleStyle Height 18
-
-ColormapFocus FollowsMouse
 
 # for other parts of the window/borders/icons:
 Mouse 1	F	A	Resize-or-Raise
@@ -50,14 +55,19 @@ Mouse 1	TS	A	Move-or-Raise
 Mouse 1	I	A	Move-or-Iconify
 Mouse 3	TSIF	A	RaiseLower
 
-######################## Sample Functions ##########################
+# For the 'windows like buttons'
+Mouse 0		2    	A     	Close
+Mouse 0		4    	A     	Maximize-Func
+Mouse 0		6    	A     	Iconify
+
+# Sample functions
 AddToFunc Move-or-Raise		I Raise
 +				M Move
-+  				D Lower
++  			D Lower
 
 AddToFunc Move-or-Raise2	M Raise
 +				M Move
-+  				D Lower
++  			D Lower
 
 AddToFunc Maximize-Func		M Maximize	 0 100
 +				C Maximize	 0 80
@@ -93,7 +103,7 @@ AddToFunc DeiconifyFocusAndWarp I Iconify -1
 AddToFunc ChangeDefaultFocus I Style * $0
 +                            I Recapture
 
-################## Some nice keybinds ###################
+# Some nice keybinds 
 Key f A 4 TrueFullScreen 
 Key r A 4 Restart
 Key q A 4 Close
@@ -107,17 +117,17 @@ Key u A 4 Exec uxterm
 Key v A 4 Exec xterm -T vifm -e vifm
 Key k A 4 Next (CurrentDesk, AcceptsFocus) SwitchFocus 
 Key j A 4 Prev (CurrentDesk, AcceptsFocus) SwitchFocus 
-Key g A 4 Exec gvim 
 Key p A 4 Exec pavucontrol
 Key i A 4 Iconify
+Key c A 4 Exec codeblocks
 key 0 A 4 GotoDesk 0 0
 Key 1 A 4 GotoDesk 1 0 
 Key 2 A 4 GotoDesk 2 0
 Key 3 A 4 GotoDesk 0 1 
 Key 4 A 4 GotoDesk 1 1
 Key 5 A 4 GotoDesk 2 1
-##########################################################
 
+# Switches focus with h j k l
 DestroyFunc SwitchFocus
 AddToFunc SwitchFocus
 + I Iconify off
@@ -125,6 +135,7 @@ AddToFunc SwitchFocus
 + I Raise
 + I WarpToWindow !raise 5 5
 
+# Makes a window fullscreen with no borders
 DestroyFunc TrueFullScreen 
 AddToFunc TrueFullScreen 
 + I ThisWindow (Maximized) DestroyWindowStyle
