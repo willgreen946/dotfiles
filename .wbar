@@ -1,0 +1,40 @@
+i: /usr/local/share/pixmaps/wbar/dock.png
+c: wbar --bpress --above-desk --pos bottom --isize 48 --idist 5 --nanim 4 --falfa 65
+t: /10
+
+i: /home/will/.icons/programs/neovim.ico
+c: xterm -e nvim
+t: NeoVim
+
+i: /home/will/.icons/programs/mini.xterm_48x48.xpm
+c: xterm
+t: Terminal
+
+i: /home/will/.icons/programs/vifm.png
+c: xterm -e vifm
+t: Vifm
+
+i: /home/will/.icons/programs/qutebrowser-64x64.png
+c: qutebrowser
+t: Browser
+
+i: /home/will/.icons/programs/Wwalczyszyn-Android-Style-Music-Player.256.png
+c: xterm -e mixertui
+t: mixer
+
+i: /home/will/.icons/programs/htop.png
+c: xterm -e htop
+t: HTOP
+
+i: /home/will/.icons/programs/Oxygen-Icons.org-Oxygen-Categories-applications-internet.256.png
+c: wpa_gui
+t: wpa_gui
+
+i: /home/will/.icons/programs/Hopstarter-Hard-Drive-Device-Hard-Drive.512.png
+c: xterm -e ncdu
+t: disks
+
+i: /usr/local/share/pixmaps/wbar/wbar.png
+c: wbar-config
+t: Config
+
