@@ -81,7 +81,7 @@ nnoremap <C-p> :tabNext <Enter>
 nnoremap <C-n> :tabprevious <Enter>
 nnoremap <C-l> :vert Lexplore<Enter>
 nnoremap <C-s> :bo horizontal terminal ++rows=10<Enter>
-nnoremap <C-t> :tab ter<Enter>
+"nnoremap <C-t> :tabnew term<Enter>
 nnoremap <C-m> :make <Enter>
 noremap <leader>i :colorscheme solarized <Enter>
 noremap <leader>u :colorscheme darkblue <Enter>
