@@ -12,13 +12,11 @@ xinput set-prop "/dev/wsmouse" "WS Pointer Wheel Emulation Button" 2
 xinput set-prop "/dev/wsmouse" "WS Pointer Wheel Emulation Axes" 6 7 4 5
 
 # Setting wallpaper
-feh --bg-scale Pictures/BSD.jpg
+feh --bg-scale Pictures/FreeBSD.png
 
 # Startup programs
 xterm -e tmux -2 &
-
-# bar 
+xclock -chime &
 wbar &
-
 # Window Manager
 ctwm

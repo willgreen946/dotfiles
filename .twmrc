@@ -11,30 +11,40 @@
 NoGrabServer
 RestartPreviousState
 DecorateTransients
-TitleFont "terminus-ttf"
-ResizeFont "terminus-ttf"
-MenuFont "terminus-ttf"
-IconFont "terminus-ttf"
-IconManagerFont "terminus-ttf"
-#ClientBorderWidth
 
-Color
-{
-    BorderColor "#33ff66"
-    DefaultBackground "#252525"
-    DefaultForeground "#33ff66"
-    TitleBackground "#000000"
-    TitleForeground "#33ff66"
-    MenuBackground "#000000"
-    MenuForeground "#33ff66"
-    MenuBorderColor "#33ff66"
-    MenuTitleBackground "#000000"
-    MenuTitleForeground "#33ff66"
-    IconBackground "#000000"
-    IconForeground "#33ff66"
-    IconBorderColor "#33ff66"
-    IconManagerBackground "#000000"
-    IconManagerForeground "#33ff66"
+# Fonts 
+TitleFont       "-*-helvetica-bold-r-normal-*-12-*-*-*-*-*-iso10646-1"
+ResizeFont      "-*-helvetica-bold-r-normal-*-12-*-*-*-*-*-iso10646-1"
+MenuFont        "-*-helvetica-bold-r-normal-*-12-*-*-*-*-*-iso10646-1"
+IconFont        "-*-helvetica-bold-r-normal-*-12-*-*-*-*-*-iso10646-1"
+IconManagerFont "-*-helvetica-bold-r-normal-*-12-*-*-*-*-*-iso10646-1"
+
+NoTitle {
+	"wbar"
+	"xclock"
+	"xterm"
+}
+
+NoBorder {
+	"xterm"
+}
+
+Color {
+    BorderColor "slategrey"
+    DefaultBackground "Red4"
+    DefaultForeground "gray85"
+    TitleBackground "Red4"
+    TitleForeground "gray85"
+    MenuBackground "Red4"
+    MenuForeground "gray85"
+    MenuBorderColor "slategrey"
+    MenuTitleBackground "gray70"
+    MenuTitleForeground "Red4"
+    IconBackground "Red4"
+    IconForeground "gray85"
+    IconBorderColor "gray85"
+    IconManagerBackground "Red4"
+    IconManagerForeground "gray85"
 }
 
 #
@@ -44,7 +54,7 @@ MoveDelta 3
 Function "move-or-lower" { f.move f.deltastop f.lower }
 Function "move-or-raise" { f.move f.deltastop f.raise }
 Function "move-or-iconify" { f.move f.deltastop f.iconify }
-
+Function "move-or-resize" { f.move f.deltastop f.resize }
 #
 # Set some useful bindings.  Sort of uwm-ish, sort of simple-button-ish
 #
@@ -52,10 +62,10 @@ Button1 = : root : f.menu "defops"
 
 Button1 = m : window|icon : f.function "move-or-lower"
 Button2 = m : window|icon : f.iconify
-Button3 = m : window|icon : f.function "move-or-raise"
+Button3 = m : window|icon : f.function "move-or-resize" 
 
-#Button1 = : title : f.function "move-or-raise"
-#Button2 = : title : f.raiselower
+Button1 = : title : f.function "move-or-raise"
+Button2 = : title : f.raiselower
 
 Button1 = : icon : f.function "move-or-iconify"
 Button2 = : icon : f.iconify
@@ -63,11 +73,24 @@ Button2 = : icon : f.iconify
 Button1 = : iconmgr : f.iconify
 Button2 = : iconmgr : f.iconify
 
+"F11" = : all : f.fullzoom 
+"F10" = : all : f.iconify
+"F6" = : all : f.lower 
+"f" = m : all : f.fullzoom
+"j" = m : all : f.lower
+"k" = m : all : f.raise
+"i" = m : all : f.iconify
+"r" = m : all : f.restart
+
+# Icons for the window title
+IconDirectory "/home/will/.icons/twm"
+RightTitleButton "label1.xbm"=f.iconify
+RightTitleButton "label3.xbm"=f.fullzoom
+
 #
 # And a menus with the usual things
 #
-menu "defops"
-{
+menu "defops" {
 "Twm"	f.title
 "Iconify"	f.iconify
 "Resize"	f.resize
@@ -81,10 +104,9 @@ menu "defops"
 "Hide Iconmgr"	f.hideiconmgr
 ""		f.nop
 "Xterm"		f.exec "exec xterm &"
-"Browser"	f.exec "exec qutebrowser &"
-"Calculator"	f.exec "exec xcalc &"
-"Vim"		f.exec "exec xterm -e vim &"
-"Tmux"		f.exec "exec xterm -e tmux &"
+"Vim" f.exec "exec xterm -e nvim &"
+"Vifm" f.exec "exec xterm -e vifm &"
+"Browser" f.exec "exec qutebrowser &"
 ""		f.nop
 "Kill"		f.destroy
 "Delete"	f.delete
@@ -92,6 +114,3 @@ menu "defops"
 "Restart"	f.restart
 "Exit"		f.quit
 }
-
-Function "fullscreen" { f.fullzoom f.focus f.nop }
-RightTitleButton "maximize.xbm" = f.function "fullscreen"
