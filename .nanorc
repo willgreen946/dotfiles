@@ -1,0 +1,6 @@
+set linenumbers
+set autoindent
+set tabsize 2
+set mouse
+#include "/usr/local/share/nano/nanorc.nanorc"
+#include "/usr/local/share/nano/c.nanorc"
