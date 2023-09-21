@@ -4,13 +4,15 @@
 set vicmd=nvi
 
 " Colorscheme
-colorscheme solarized-dark
-
-" Single pane
-" view
+colorscheme theme
 
 " Ctrl t to enter shell
 nnoremap <C-t> :shell <CR>
+
+set showtabline=2
+
+nnoremap <C-n> :tabnext <CR>
+nnoremap <C-p> :tabprev <CR>
 
 " Opening certain file types in certain programs
 filextype *.pdf mupdf %f &
@@ -28,4 +30,7 @@ filextype *.cpp nvim %f
 filextype *.hpp nvim %f
 filextype *.cs nvim %f
 filextype *.m nvim %f
-" only
+filextype *.html nvim %f
+filextype *.o bvi %f
+filextype *.so bvi %f
+
