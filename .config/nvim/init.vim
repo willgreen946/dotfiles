@@ -13,8 +13,8 @@ set backspace=indent
 set laststatus=1
 set showtabline=2
 set showmode
+set t_md=
 set termguicolors
-set cursorline
 set noshowmatch
 set tabstop=2
 set shiftwidth=2
@@ -25,10 +25,12 @@ set wrap
 set hlsearch
 set wildmenu
 set colorcolumn=80
+set guicursor=
 set t_Co=256
 
 " Folding
 set foldmethod=syntax
+set foldlevel=99
 
 " Gvim stuff
 set guifont=Ubuntu\ Mono\ Regular\ 12
