@@ -2,5 +2,8 @@ set linenumbers
 set autoindent
 set tabsize 2
 set mouse
-#include "/usr/local/share/nano/nanorc.nanorc"
-#include "/usr/local/share/nano/c.nanorc"
+include "/usr/local/share/nano/nanorc.nanorc"
+include "/usr/local/share/nano/c.nanorc"
+include "/home/will/.config/nano/csharp.nanorc"
+include "/usr/local/share/nano/html.nanorc"
+include "/usr/local/share/nano/asm.nanorc"

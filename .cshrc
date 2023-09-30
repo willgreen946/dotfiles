@@ -6,11 +6,13 @@
 # more examples available at /usr/share/examples/csh/
 #
 
-alias h		history 25
-alias j		jobs -l
-alias la	ls -aF
-alias lf	ls -FA
-alias ll	ls -lAF
+alias h	history 25
+alias j	 jobs -l
+alias la ls -aF
+alias lf ls -FA
+alias ll ls -lAF
+alias vi nvi
+alias msmake sh /home/will/Scripts/groff.sh
 
 # These are normally set through /etc/login.conf.  You may override them here
 # if wanted.
@@ -26,7 +28,7 @@ bindkey -v
 
 if ($?prompt) then
 	# An interactive shell -- set some stuff up
-	set prompt = "[%N@%m][%~]# "
+	set prompt = "%~> "
 	set promptchars = "%#"
 
 	set filec

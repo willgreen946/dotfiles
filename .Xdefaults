@@ -4,96 +4,17 @@ XTerm*ScrollBar: false
 XTerm*selectToClipboard: true
 
 ! Dark Blue DOS kinda theme
-!XTerm*faceName: ubuntu mono  
 XTerm*faceName: More Perfect DOS VGA
-!XTerm*faceName: Nouveau IBM 
 XTerm*faceSize: 12 
 XTerm*allowBoldFonts: false
 
-! Solarized
-XTerm*background: #002B36
-XTerm*foreground: #D2D2D2
-XTerm*borderColor: #343434
+! Colors
+XTerm*background: #0000AA
+XTerm*foreground: #f0f0f0
+XTerm*borderColor: #f0f0f0
 
-!Turning off scrollbar
+! Turning off scrollbar
 XTerm*scrollBar:  off
 
 !Starting up with a geometry
 XTerm*vt100*geometry:   88x24
-
-!Colors
-!-------------------------
-!black
-XTerm*color0: #222222
-XTerm*color8: #454545
-
-!red
-XTerm*color1: #9E5641
-XTerm*color9: #CC896D
-
-!green
-XTerm*color2: #6C7E55
-XTerm*color10: #C4DF90
-
-!yellow
-XTerm*color3: #CAAF2B
-XTerm*color11: #FFE080
-
-!blue
-XTerm*color4: #7FB8D8
-XTerm*color12: #B8DDEA
-
-!magenta
-XTerm*color5: #956D9D
-XTerm*color13: #C18FCB
-
-!cyan
-XTerm*color6: #4c8ea1
-XTerm*color14: #6bc1d0
-
-!white
-XTerm*color7: #808080
-XTerm*color15: #cdcdcd
-
-!UXTerm
-UXTerm*faceName: Nouveau IBM 
-UXTerm*faceSize: 12 
-UXTerm*allowBoldFonts: false
-
-!Colors
-!-------------------------
-!black
-UXTerm*color0: #222222
-UXTerm*color8: #454545
-
-!red
-UXTerm*color1: #9E5641
-UXTerm*color9: #CC896D
-
-!green
-UXTerm*color2: #6C7E55
-UXTerm*color10: #C4DF90
-
-!yellow
-UXTerm*color3: #CAAF2B
-UXTerm*color11: #FFE080
-
-!blue
-UXTerm*color4: #7FB8D8
-UXTerm*color12: #B8DDEA
-
-!magenta
-UXTerm*color5: #956D9D
-UXTerm*color13: #C18FCB
-
-!cyan
-UXTerm*color6: #4c8ea1
-UXTerm*color14: #6bc1d0
-
-!white
-UXTerm*color7: #808080
-UXTerm*color15: #cdcdcd
-
-! URXVT
-URxvt.geometry: 92x24
-URxvt.font:xft:Nouveau IBM:size=12:antialias=true

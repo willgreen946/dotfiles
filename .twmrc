@@ -104,9 +104,10 @@ menu "defops" {
 "Hide Iconmgr"	f.hideiconmgr
 ""		f.nop
 "Xterm"		f.exec "exec xterm &"
-"Vim" f.exec "exec xterm -e nvim &"
+"Nvi" f.exec "exec xterm -e nvi &"
+"Nano" f.exec "exec xterm -e nano &"
 "Vifm" f.exec "exec xterm -e vifm &"
-"Browser" f.exec "exec qutebrowser &"
+"Browser" f.exec "exec firefox &"
 ""		f.nop
 "Kill"		f.destroy
 "Delete"	f.delete
