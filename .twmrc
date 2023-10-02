@@ -20,7 +20,6 @@ IconFont        "-*-helvetica-bold-r-normal-*-12-*-*-*-*-*-iso10646-1"
 IconManagerFont "-*-helvetica-bold-r-normal-*-12-*-*-*-*-*-iso10646-1"
 
 NoTitle {
-	"wbar"
 	"xclock"
 	"xterm"
 }
@@ -30,21 +29,21 @@ NoBorder {
 }
 
 Color {
-    BorderColor "slategrey"
-    DefaultBackground "Red4"
-    DefaultForeground "gray85"
-    TitleBackground "Red4"
-    TitleForeground "gray85"
-    MenuBackground "Red4"
-    MenuForeground "gray85"
-    MenuBorderColor "slategrey"
-    MenuTitleBackground "gray70"
-    MenuTitleForeground "Red4"
+    BorderColor "black"
+    DefaultBackground "red4"
+    DefaultForeground "white"
+    TitleBackground "red4"
+    TitleForeground "white"
+    MenuBackground "white"
+    MenuForeground "black"
+    MenuBorderColor "black"
+    MenuTitleBackground "red4"
+    MenuTitleForeground "white"
     IconBackground "Red4"
-    IconForeground "gray85"
-    IconBorderColor "gray85"
-    IconManagerBackground "Red4"
-    IconManagerForeground "gray85"
+    IconForeground "white"
+    IconBorderColor "black"
+    IconManagerBackground "white"
+    IconManagerForeground "black"
 }
 
 #
@@ -83,9 +82,10 @@ Button2 = : iconmgr : f.iconify
 "r" = m : all : f.restart
 
 # Icons for the window title
-IconDirectory "/home/will/.icons/twm"
-RightTitleButton "label1.xbm"=f.iconify
-RightTitleButton "label3.xbm"=f.fullzoom
+PixmapDirectory "/home/will/.icons/"
+RightTitleButton "xpm:winminimize.xpm"=f.iconify
+RightTitleButton "xpm:winmaximize.xpm"=f.fullzoom
+RightTitleButton "xpm:x.xpm"=f.destroy
 
 #
 # And a menus with the usual things
@@ -102,13 +102,17 @@ menu "defops" {
 "Unfocus"	f.unfocus
 "Show Iconmgr"	f.showiconmgr
 "Hide Iconmgr"	f.hideiconmgr
-""		f.nop
-"Xterm"		f.exec "exec xterm &"
-"Nvi" f.exec "exec xterm -e nvi &"
-"Nano" f.exec "exec xterm -e nano &"
-"Vifm" f.exec "exec xterm -e vifm &"
-"Browser" f.exec "exec firefox &"
-""		f.nop
+""f.nop
+"Terminal"		f.exec "exec xterm &"
+"Nano" 				f.exec "exec xterm -e nano &"
+"Vifm" 				f.exec "exec xterm -e vifm &"
+"Libreoffice" f.exec "exec libreoffice &"
+"Wifi" 				f.exec "exec wpa_gui &"
+"Calculator" 	f.exec "exec xcalc &"
+"Clock" 			f.exec "exec xclock &"
+"Browser" 		f.exec "exec firefox &"
+""f.nop
+
 "Kill"		f.destroy
 "Delete"	f.delete
 ""		f.nop
