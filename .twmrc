@@ -21,11 +21,11 @@ IconManagerFont "-*-helvetica-bold-r-normal-*-12-*-*-*-*-*-iso10646-1"
 
 NoTitle {
 	"xclock"
-	"xterm"
 }
 
 NoBorder {
 	"xterm"
+	"firefox"
 }
 
 Color {
