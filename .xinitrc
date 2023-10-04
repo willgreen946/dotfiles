@@ -20,4 +20,4 @@ xterm -e tmux -2 &
 # Window Manager
 #mate-wm
 #mate-session 
-twm
+ctwm
