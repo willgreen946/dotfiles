@@ -15,7 +15,7 @@ xinput set-prop "/dev/wsmouse" "WS Pointer Wheel Emulation Axes" 6 7 4 5
 feh --bg-scale Pictures/os9.jpg
 
 # Startup programs
-xterm -e tmux -2 &
+uxterm -e tmux -2 &
 
 # Window Manager
 #mate-wm

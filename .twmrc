@@ -28,6 +28,8 @@ NoBorder {
 	"firefox"
 	"xclock"
 	"libreoffice"
+	"xcalc"
+	"wpa_gui"
 }
 
 Color {
@@ -74,8 +76,6 @@ Button2 = : icon : f.iconify
 Button1 = : iconmgr : f.iconify
 Button2 = : iconmgr : f.iconify
 
-"F11" = : all : f.fullzoom 
-"F10" = : all : f.iconify
 "F6" = : all : f.lower 
 "f" = m : all : f.fullzoom
 "j" = m : all : f.lower
@@ -105,7 +105,7 @@ menu "defops" {
 "Show Iconmgr"	f.showiconmgr
 "Hide Iconmgr"	f.hideiconmgr
 ""f.nop
-"Terminal"		f.exec "exec xterm &"
+"Terminal"		f.exec "exec uxterm &"
 "Nano" 				f.exec "exec xterm -e nano &"
 "Vifm" 				f.exec "exec xterm -e vifm &"
 "Libreoffice" f.exec "exec libreoffice &"
@@ -113,6 +113,7 @@ menu "defops" {
 "Calculator" 	f.exec "exec xcalc &"
 "Clock" 			f.exec "exec xclock &"
 "Browser" 		f.exec "exec firefox &"
+"UXTerm"			f.exec "exec uxterm &"
 ""f.nop
 
 "Kill"		f.destroy

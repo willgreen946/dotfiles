@@ -12,6 +12,7 @@ alias la ls -aF
 alias lf ls -FA
 alias ll ls -lAF
 alias vi nvi
+alias edit mcedit
 alias msmake sh /home/will/Scripts/groff.sh
 
 # These are normally set through /etc/login.conf.  You may override them here
