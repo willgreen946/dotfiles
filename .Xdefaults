@@ -3,6 +3,9 @@ XTerm*loginShell: true
 XTerm*ScrollBar: false
 XTerm*selectToClipboard: true
 
+XTerm.VT100.blink: true
+XTerm*cursorBlink: true 
+
 ! Dark Blue DOS kinda theme
 XTerm*faceName: More Perfect DOS VGA
 XTerm*faceSize: 12 
@@ -18,3 +21,11 @@ XTerm*scrollBar:  off
 
 !Starting up with a geometry
 XTerm*vt100*geometry:   88x24
+
+UXTerm*background: #000000
+UXTerm*foreground: #ffffff
+UXTerm*faceName: More Perfect DOS VGA
+UXTerm*faceSize: 12
+UXTerm*scrollBar: off 
+UXTerm*allowBoldFonts: false
+UXTerm*cursorBlink: true
