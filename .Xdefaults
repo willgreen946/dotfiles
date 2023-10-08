@@ -1,31 +1,85 @@
 ! My .Xdefault/.Xresources file
+
+! Use a login shell with every terminal
 XTerm*loginShell: true
-XTerm*ScrollBar: false
+UXTerm*loginShell: true
+
+! Xsel
 XTerm*selectToClipboard: true
+UXTerm*selectToCliboard: true
 
+! Cursor blink
 XTerm.VT100.blink: true
+UXTerm.VT100.blink: true
 XTerm*cursorBlink: true 
+UXTerm*cursorBlink: true
 
-! Dark Blue DOS kinda theme
+! Fonts
 XTerm*faceName: More Perfect DOS VGA
+UXTerm*faceName: More Perfect DOS VGA
 XTerm*faceSize: 12 
+UXTerm*faceSize: 12
 XTerm*allowBoldFonts: false
-
-! Colors
-XTerm*background: #0000AA
-XTerm*foreground: #f0f0f0
-XTerm*borderColor: #f0f0f0
+UXTerm*allowBoldFonts: false
 
 ! Turning off scrollbar
 XTerm*scrollBar:  off
+UXTerm*scrollBar: off
 
 !Starting up with a geometry
 XTerm*vt100*geometry:   88x24
 
+XTerm*background: #000000
+XTerm*foreground: #AAAAAA
 UXTerm*background: #000000
-UXTerm*foreground: #ffffff
-UXTerm*faceName: More Perfect DOS VGA
-UXTerm*faceSize: 12
-UXTerm*scrollBar: off 
-UXTerm*allowBoldFonts: false
-UXTerm*cursorBlink: true
+UXTerm*foreground: #AAAAAA
+
+! Normal colors - Bright colors
+
+! Black
+XTerm*color0: #000000
+!XTerm*color8: #f0f0f0
+UXTerm*color0: #000000
+!UXTerm*color8: #f0f0f0
+
+! Red
+XTerm*color1: #AA0000
+XTerm*color9: #FF0000
+UXTerm*color1: #AA0000
+UXTerm*color9: #FF0000
+
+! Green
+XTerm*color2: #00AA00
+XTerm*color10: #00FF00
+UXTerm*color2: #00AA00
+UXTerm*color10: #00FF00
+
+! Yellow
+XTerm*color3: #AAAA00
+XTerm*color11: #FFFF00
+UXTerm*color3: #AAAA00
+UXTerm*color11: #FFFF00
+
+! Blue
+XTerm*color4: #0000AA
+XTerm*color12: #0000FF
+UXTerm*color4: #0000AA
+UXTerm*color12: #0000FF
+
+! Purple
+XTerm*color5: #AA00AA
+XTerm*color13: #FF00FF
+UXTerm*color5: #AA00AA
+UXTerm*color13: #FF00FF
+
+! Cyan
+XTerm*color6: #00AAAA
+XTerm*color14: #00FFFF
+UXTerm*color6: #00AAAA
+UXTerm*color14: #00FFFF
+
+! White
+XTerm*color7: #AAAAAA
+XTerm*color15: #FFFFFF
+UXTerm*color7: #AAAAAA
+UXTerm*color15: #FFFFFF
