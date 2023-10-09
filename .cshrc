@@ -11,6 +11,7 @@ alias j	 jobs -l
 alias la ls -aF
 alias lf ls -FA
 alias ll ls -lAF
+alias cls clear
 alias vi nvi
 alias edit mcedit
 alias msmake sh /home/will/Scripts/groff.sh
