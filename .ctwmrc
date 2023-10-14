@@ -265,26 +265,13 @@ Monochrome
 
 syscmd(/usr/X11R7/libexec/ctwm_app_menu)
 
-menu "appmenu"
-{
-    "pkgsrc Applications"	f.title
-    " Accessories"		f.menu "Accessories"
-    " Games"			f.menu "Games"
-    " Graphics"			f.menu "Graphics"
-    " Internet"			f.menu "Internet"
-    " Multimedia"		f.menu "Multimedia"
-    " Office"			f.menu "Office"
-    " Programming"		f.menu "Programming"
-    " System"			f.menu "System"
-    " Misc"			f.menu "Misc"
-}
-
 menu "deskutils"
 {
     "Desktop utilities"		f.title
     " Calculator"		!"xcalc &"
     " Text editor"		!"uxterm -e mcedit &"
 		" Browser"			!"firefox &"
+		" Libreoffice" !"libreoffice &"
 		" Network" !"wpa_gui &"
     ""				f.separator
     " XEyes"			!"xeyes &"
@@ -316,7 +303,6 @@ menu "FreeBSD"
     ""				f.separator
     " Terminal"			!"uxterm &"
     ""				f.separator
-    " Applications"		f.menu "appmenu"
     " Desktop utilities"	f.menu "deskutils"
     " Terminal utilities"	f.menu "termutils"
     ""				f.separator
@@ -502,7 +488,6 @@ Button3 = mod4	: window 	: f.resize
 "k"      = mod1 | c | s : window : f.changesize "bottom -10"
 "h"      = mod1 | c | s : window : f.changesize "right -10"
 "l"      = mod1 | c | s : window : f.changesize "right +10"
-
 
 "f" = m : all : f.fullzoom
 "j" = m : all : f.lower
