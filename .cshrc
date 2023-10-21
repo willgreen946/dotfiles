@@ -30,7 +30,7 @@ bindkey -v
 
 if ($?prompt) then
 	# An interactive shell -- set some stuff up
-	set prompt = "%~> "
+	set prompt = "%~>"
 	set promptchars = "%#"
 
 	set filec
