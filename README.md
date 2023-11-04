@@ -1,5 +1,5 @@
-# dots-freebsd
-## These are all the dot files I use (some edited for FreeBSD use)
+# dotsfiles
+## These are all the dot files I use (some edited for Net/OpenBSD use)
 The changes for FreeBSD are mainly to do with fonts as some fonts have different names on FreeBSD, to Linux.
 These might work on Linux as well but I have not tested them.
 All of what is in here can be put in your $HOME directory and should just work
