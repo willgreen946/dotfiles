@@ -11,13 +11,12 @@ xinput set-prop "/dev/wsmouse" "WS Pointer Wheel Emulation" 1
 xinput set-prop "/dev/wsmouse" "WS Pointer Wheel Emulation Button" 2
 xinput set-prop "/dev/wsmouse" "WS Pointer Wheel Emulation Axes" 6 7 4 5
 
-# Setting wallpaper
-feh --bg-scale Pictures/os9.jpg
-
 # Startup programs
-uxterm -e tmux -2 &
+xterm &
+xconsole &
+
+# Wallpaper
+feh --bg-scale $HOME/Pictures/wallpaper.png
 
 # Window Manager
-#mate-wm
-#mate-session 
-ctwm
+dwm
